@@ -1,0 +1,51 @@
+@b Market {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; // background: rgba(0, 0, 0, .3);
+  @e item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    &.-mask {
+      background-image: linear-gradient(transparent 0%, transparent 60%, rgba(0, 0, 0, .3) 100%);
+    }
+    &.-item {
+      background-color: #fff;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  @e arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 30px;
+    margin-left: -15px;
+    animation-fill-mode: both;
+    animation: arrow .5s infinite alternate;
+    transition: opacity .5s;
+    &[hide] {
+      opacity: 0;
+    }
+  }
+  @e audio {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-image: linear-gradient(transparent 0%, rgba(255, 255, 255, .8) 50%, transparent 100%);
+    border-radius: 50%;
+    .iconfont {
+      color: #666;
+      font-size: 26px;
+    }
+  }
+}
+
+@keyframes arrow {
+  to {
+    transform: translate3d(0, -50%, 0) scale(.8);
+  }
+}

@@ -1,0 +1,121 @@
+@define-mixin bgCover {
+  background-size: cover;
+  background-position: center;
+}
+
+@define-mixin absOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@b assemble-hd {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background: #fff;
+  li {
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+    line-height: 40px;
+    text-align: center;
+    transition: all .3s;
+    &:active,
+    &.router-link-active {
+      color: #fff;
+      background-color: #ff5a5f;
+    }
+  }
+}
+
+@b assemble-top {
+  text-align: center;
+  @e img {
+    height: 60%;
+    @mixin bgCover;
+  }
+  @e info {
+    padding-top: 13%;
+  }
+  @e title {
+    font-size: 30px;
+  }
+  @e desc {
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.2;
+  }
+  @e price {
+    font-size: 12px;
+    padding: 6px 12px;
+    border: 1px solid;
+    margin-top: 24px;
+    display: inline-block;
+  }
+}
+
+@b assemble-sub {
+  @mixin bgCover;
+  @mixin absOverlay;
+  color: #fff;
+  text-align: center;
+  padding-top: 60%;
+  @e title {
+    font-size: 24px;
+  }
+  @e desc {
+    font-size: 11px;
+    line-height: 2;
+    margin-top: 34px;
+  }
+}
+
+@b assemble-space {
+  @mixin absOverlay;
+  overflow: hidden;
+  @e img {
+    height: 50%;
+    @mixin bgCover;
+  }
+  @e info {
+    height: 50%;
+    padding-top: 10%;
+    position: relative;
+  }
+  @e title {
+    font-size: 24px;
+    text-align: center;
+  }
+  @e desc {
+    margin-top: 20px;
+    font-size: 11px;
+    line-height: 2;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+  @e bg {
+    position: absolute;
+  }
+}
+
+@b assemble-ft {
+  @mixin bgCover;
+  @mixin absOverlay;
+  text-align: center;
+  color: #fff;
+  padding-top: 45%;
+  @e title {
+    font-size: 24px;
+  }
+  @e desc {
+    font-size: 11px;
+    line-height: 2;
+    margin-top: 30px;
+  }
+}

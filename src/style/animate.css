@@ -1,0 +1,79 @@
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 300ms;
+  @each $d in (200, 400, 600, 800) {
+    &.delay$(d) {
+      animation-delay: $(d)ms;
+    }
+  }
+  @each $name in (slideInUp, slideInDown, scale, scaleToRight, scaleToLeft) {
+    &.$(name) {
+      animation-name: $(name);
+      &.fade {
+        animation-name: $(name), fade;
+      }
+    }
+  }
+  &.fade {
+    animation-name: fade;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 40%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0) translate3d(0, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -40%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scaleToLeft {
+  from {
+    transform-origin: right bottom;
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scaleToRight {
+  from {
+    transform-origin: left bottom;
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}

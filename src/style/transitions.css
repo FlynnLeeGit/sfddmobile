@@ -1,0 +1,45 @@
+#app {
+  .fade {
+    &-enter-active,
+    &-leave-active {
+      transition: opacity .3s;
+      will-change: opacity;
+    }
+    &-enter,
+    &-leave-active {
+      opacity: 0;
+    }
+  }
+  @define-mixin slideTransition {
+    transition: transform .5s, opacity .8s;
+    will-change: transform, opacity;
+  }
+  .slideUp {
+    &-enter-active,
+    &-leave-active {
+      @mixin slideTransition;
+    }
+    &-enter {
+      transform: translate3d(0, 100%, 0);
+      opacity: 0;
+    }
+    &-leave-active {
+      transform: translate3d(0, -100%, 0);
+      opacity: 0;
+    }
+  }
+  .slideDown {
+    &-enter-active,
+    &-leave-active {
+      @mixin slideTransition;
+    }
+    &-enter {
+      transform: translate3d(0, -100%, 0);
+      opacity: 0;
+    }
+    &-leave-active {
+      transform: translate3d(0, 100%, 0);
+      opacity: 0;
+    }
+  }
+}

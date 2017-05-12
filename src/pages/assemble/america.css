@@ -1,0 +1,43 @@
+.assemble-top__img {
+  background-image: url('../../assets/assemble/america/hall.jpg');
+}
+
+.assemble-sub {
+  padding-top: 40%;
+  background-image: url('../../assets/assemble/america/sub.jpg');
+}
+
+.hall {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/america/hall.jpg');
+  }
+  .assemble-space__bg {
+    right: -15%;
+  }
+}
+
+.dining-room {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/america/dining-room.jpg');
+  }
+  .assemble-space__bg {
+    left: -15%;
+  }
+}
+
+@b bedroom {
+  @e flower {
+    right: -10%;
+  }
+  @e flower-leaf {
+    right: -8%;
+    top: 48%;
+  }
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/america/bedroom.jpg');
+  }
+}
+
+.assemble-ft {
+  background-image: url('../../assets/assemble/america/ft.jpg');
+}

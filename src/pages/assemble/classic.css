@@ -1,0 +1,49 @@
+.assemble-top__img {
+  background-image: url('../../assets/assemble/classic/top.jpg');
+}
+
+.assemble-sub {
+  background-image: url('../../assets/assemble/classic/sub.jpg');
+}
+
+.hall {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/classic/hall.jpg');
+  }
+  .assemble-space__bg {
+    right: 0;
+    top: 0;
+  }
+}
+
+.dining-room {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/classic/dining-room.jpg');
+  }
+  .assemble-space__bg {
+    top: 10%;
+  }
+}
+
+.bedroom {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/classic/bedroom.jpg');
+  }
+  .assemble-space__bg {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.whole {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/classic/whole.jpg');
+  }
+  .assemble-space__bg {
+    top: 40%;
+  }
+}
+
+.assemble-ft {
+  background-image: url('../../assets/assemble/classic/ft.jpg');
+}

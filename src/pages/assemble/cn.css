@@ -1,0 +1,51 @@
+.assemble-top__img {
+  background-image: url('../../assets/assemble/cn/hall.jpg');
+}
+
+.assemble-sub {
+  padding-top: 65%;
+  background-image: url('../../assets/assemble/cn/sub.jpg');
+}
+
+.hall {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/cn/hall.jpg');
+  }
+  .assemble-space__bg {
+    width: 200%;
+    top: 0;
+    animation: bgmove 5s alternate infinite linear;
+  }
+}
+
+.dining-room {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/cn/dining-room.jpg');
+  }
+  .assemble-space__bg {
+    top: -50px;
+    width: 200%;
+    animation: bgmove 5s alternate infinite linear;
+  }
+}
+
+.bedroom {
+  .assemble-space__img {
+    background-image: url('../../assets/assemble/cn/bedroom.jpg');
+  }
+  .assemble-space__bg {
+    top: 0;
+    width: 200%;
+    animation: bgmove 5s alternate infinite linear;
+  }
+}
+
+.assemble-ft {
+  background-image: url('../../assets/assemble/cn/ft.jpg');
+}
+
+@keyframes bgmove {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
