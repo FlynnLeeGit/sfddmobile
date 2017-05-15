@@ -1,16 +1,4 @@
-@define-mixin bgCover {
-  background-size: cover;
-  background-position: center;
-}
-
-@define-mixin absOverlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
+@import '../style/mixins.css';
 @b assemble-hd {
   display: flex;
   position: fixed;
@@ -57,6 +45,15 @@
     border: 1px solid;
     margin-top: 24px;
     display: inline-block;
+  }
+  @e btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 14px;
+    margin-top: 24px;
+    background-color: #ff5a5f;
+    border-radius: 2px;
+    color: #fff;
   }
 }
 

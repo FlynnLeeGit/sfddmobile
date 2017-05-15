@@ -1,21 +1,21 @@
 <template>
-  <div class="Market">
+  <div class="Market"
+       v-finger:swipe='swipe'
+       @touchstart.prevent>
     <slot></slot>
-    <div v-finger:swipe='swipe'
-         @touchstart.prevent
-         class="Market__item -mask">
-      <img :hide='idx>=len-1'
-           class="Market__arrow"
-           :src="arrowImg"
-           alt="arrow">
-      <div v-finger:tap='togglePlay'
-           class="Market__audio">
-        <i class="iconfont"
-           :class="[isPlay?'icon-stop':'icon-play']"></i>
-        <audio ref='audio'
-               :src="audio">
-        </audio>
-      </div>
+    <img :hide='idx>=len-1'
+         class="Market__arrow"
+         :src="arrowImg"
+         alt="arrow">
+
+    <div v-finger:tap='togglePlay'
+         v-if='audio'
+         class="Market__audio">
+      <i class="iconfont"
+         :class="[isPlay?'icon-stop':'icon-play']"></i>
+      <audio ref='audio'
+             :src="audio">
+      </audio>
     </div>
 
   </div>
@@ -81,7 +81,9 @@ export default {
     this.$children.forEach((item, idx) => {
       item.getIdx(idx)
     })
-    this.$refs.audio.play()
+    if (this.audio) {
+      this.$refs.audio.play()
+    }
   }
 }
 </script>

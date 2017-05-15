@@ -1,0 +1,31 @@
+@b what {
+  padding-top: 8%;
+  text-align: center;
+  @e img {
+    margin-top: 20px;
+  }
+}
+
+@b who {
+  padding-top: 8%;
+  position: relative;
+  color: #fff;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  @e hl {
+    color: #ffe329;
+  }
+  @e img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+@b flow {
+  padding-top: 8%;
+  text-align: center;
+  @e img {
+    margin-top: 30px;
+  }
+}

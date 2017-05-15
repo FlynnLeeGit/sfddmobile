@@ -1,7 +1,7 @@
 <template>
   <transition appear :name='transition' mode='in-out'>
     <div v-if='isCurrent'
-         class="Market__item -item">
+         class="Market__item">
       <slot></slot>
     </div>
   </transition>

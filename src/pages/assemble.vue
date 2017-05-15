@@ -1,6 +1,7 @@
 <template>
   <div>
-    <ul class="assemble-hd">
+    <ul class="assemble-hd"
+        v-show='showTabs'>
       <router-link v-for='tab in tabs'
                    :key='tab.to'
                    :to='tab.to'
@@ -11,6 +12,11 @@
 </template>
 <script>
 export default {
+  data () {
+    return {
+      showTabs: true
+    }
+  },
   computed: {
     style () {
       const [, staticStyle] = this.$route.path.match(/\/intro\/(\w+)/) || []
@@ -23,6 +29,14 @@ export default {
         { name: '材料', to: `/assemble/material/${this.style}` }
       ]
     }
+  },
+  beforeCreate () {
+    this.$root.$on('assemble:hideTabs', () => {
+      this.showTabs = false
+    })
+    this.$root.$on('assemble:showTabs', () => {
+      this.showTabs = true
+    })
   }
 }
 </script>

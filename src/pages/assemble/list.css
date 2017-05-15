@@ -1,0 +1,23 @@
+.cn {
+  .assemble-top__img {
+    background-image: url('../../assets/assemble/cn/hall.jpg');
+  }
+}
+
+.classic {
+  .assemble-top__img {
+    background-image: url('../../assets/assemble/classic/hall.jpg');
+  }
+}
+
+.simple {
+  .assemble-top__img {
+    background-image: url('../../assets/assemble/simple/hall.jpg');
+  }
+}
+
+.america {
+  .assemble-top__img {
+    background-image: url('../../assets/assemble/america/hall.jpg');
+  }
+}
