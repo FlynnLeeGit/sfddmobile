@@ -1,26 +1,55 @@
 <template>
-  <div>
-    <market>
-      <market-item>
-
-      </market-item>
-      <market-item>2</market-item>
-      <market-item>3</market-item>
-    </market>
-  </div>
+<div>
+  hello word
+</div>
 </template>
 <script>
-import Market from '@/components/Market'
-import MarketItem from '@/components/MarketItem'
+import axios from '@/plugins/axios'
 
 export default {
-  components: {
-    Market,
-    MarketItem
+  components: {},
+  created () {
+    axios.get('/_common/wechatjs')
+      .then(function (response) {
+        window.wx.config(response.data)
+        window.wx.ready(function () {
+          console.log('验证成功')
+          window.wx.onMenuShareTimeline({
+            title: '测试分享朋友圈',
+            link: 'http://staging.sfdd.com',
+            imgUrl: 'http://dn-st.baogaoyezhu.com/zhenyu/57d2865c1ea17.JPG_case380',
+            success: function () {
+              window.alert('分享成功')
+            },
+            cancel: function () {
+              window.alert('取消分享')
+            }
+          })
+          window.wx.onMenuShareAppMessage({
+            title: '分享消息',
+            desc: '测试发送分享消息',
+            link: 'http://staging.sfdd.com',
+            imgUrl: 'http://dn-st.baogaoyezhu.com/zhenyu/57d2865c1ea17.JPG_case380',
+            type: 'link',
+            dataUrl: '',
+            success: function () {
+              window.alert('分享成功')
+            },
+            cancel: function () {
+              window.alert('分享失败')
+            }
+          })
+        })
+        window.wx.error(function (res) {
+          window.alert(res)
+        })
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   },
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>
