@@ -42,6 +42,7 @@ export default {
         })
         window.wx.error(function (res) {
           window.alert(res)
+          console.log(res)
         })
       })
       .catch(function (error) {
