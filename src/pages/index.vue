@@ -9,7 +9,8 @@ import axios from '@/plugins/axios'
 export default {
   components: {},
   created () {
-    axios.get('/_common/wechatjs')
+    const url = window.location.href
+    axios.get(`/_common/wechatjs?url=${url}`)
       .then(function (response) {
         window.wx.config(response.data)
         window.wx.ready(function () {
