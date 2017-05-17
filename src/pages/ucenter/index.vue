@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  beforeRouteEnter(to, from, next){
+  beforeRouteEnter (to, from, next) {
 
   }
 }
