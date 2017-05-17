@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    hello contract
   </div>
 </template>
 
