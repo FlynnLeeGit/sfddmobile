@@ -11,6 +11,14 @@ import assembleAmerica from '@/pages/assemble/america'
 import assembleVr from '@/pages/assemble/_vr'
 import assembleMaterial from '@/pages/assemble/_material'
 
+import ucenter from '@/pages/ucenter'
+import ucContract from '@/pages/ucenter/contract'
+import ucMaterial from '@/pages/ucenter/material'
+import ucProgress from '@/pages/ucenter/progress'
+import ucAfterSales from '@/pages/ucenter/aftersales'
+import ucLoan from '@/pages/ucenter/loan'
+import ucBind from '@/pages/ucenter/bind'
+
 import customDesignIndex from '@/pages/custom-design/index'
 
 import caseDragon from '@/pages/cases/dragon'
@@ -63,6 +71,36 @@ const routes = [
       {
         path: 'material/:style?',
         component: assembleMaterial
+      }
+    ]
+  },
+  {
+    path: '/ucenter',
+    component: ucenter,
+    children: [
+      {
+        path: 'contract',
+        component: ucContract
+      },
+      {
+        path: 'material',
+        component: ucMaterial
+      },
+      {
+        path: 'progress',
+        component: ucProgress
+      },
+      {
+        path: 'aftersales',
+        component: ucAfterSales
+      },
+      {
+        path: 'loan',
+        component: ucLoan
+      },
+      {
+        path: 'bind',
+        component: ucBind
       }
     ]
   }
