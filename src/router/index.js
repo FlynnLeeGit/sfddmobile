@@ -17,6 +17,7 @@ import ucMaterial from '@/pages/ucenter/material'
 import ucProgress from '@/pages/ucenter/progress'
 import ucAfterSales from '@/pages/ucenter/aftersales'
 import ucLoan from '@/pages/ucenter/loan'
+import ucBind from '@/pages/ucenter/bind'
 
 import customDesignIndex from '@/pages/custom-design/index'
 
@@ -90,6 +91,10 @@ const routes = [
       {
         path: 'loan',
         component: ucLoan
+      },
+      {
+        path: 'bind',
+        component: ucBind
       }
     ]
   }
