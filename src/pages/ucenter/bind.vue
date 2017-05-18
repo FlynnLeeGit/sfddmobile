@@ -1,11 +1,16 @@
 <template>
   <div>
-    bind mobile
+
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      captcha: ''
+    }
+  }
 }
 </script>
 
