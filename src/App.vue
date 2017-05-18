@@ -25,6 +25,7 @@ body {
 }
 </style>
 <style src='./style/global.css'></style>
+<style src='./style/grid.css'></style>
 <style src='./style/animate.css'></style>
 <style src='./style/transitions.css'></style>
 <style src='./style/helpers.css'></style>

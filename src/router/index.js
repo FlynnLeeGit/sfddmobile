@@ -21,6 +21,8 @@ import ucBind from '@/pages/ucenter/bind'
 
 import customDesignIndex from '@/pages/custom-design/index'
 
+import caseDragon from '@/pages/cases/dragon'
+
 Vue.use(Router)
 import { base } from '../../localConfig'
 
@@ -33,6 +35,10 @@ const routes = [
   {
     path: '/custom-design',
     component: customDesignIndex
+  },
+  {
+    path: '/cases/dragon',
+    component: caseDragon
   },
   {
     path: '/assemble',
