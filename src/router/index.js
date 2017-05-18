@@ -13,6 +13,8 @@ import assembleMaterial from '@/pages/assemble/_material'
 
 import customDesignIndex from '@/pages/custom-design/index'
 
+import caseDragon from '@/pages/cases/dragon'
+
 Vue.use(Router)
 import { base } from '../../localConfig'
 
@@ -25,6 +27,10 @@ const routes = [
   {
     path: '/custom-design',
     component: customDesignIndex
+  },
+  {
+    path: '/cases/dragon',
+    component: caseDragon
   },
   {
     path: '/assemble',

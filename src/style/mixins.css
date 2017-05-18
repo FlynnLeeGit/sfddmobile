@@ -10,3 +10,20 @@
   top: 0;
   bottom: 0;
 }
+
+@define-mixin vCenter {
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+@define-mixin px2w $px {
+  width: calc( $(px)/ 750 * 100vw);
+}
+
+@define-mixin px2h $px {
+  height: calc( $(px)/ 1334 * 100vh);
+}

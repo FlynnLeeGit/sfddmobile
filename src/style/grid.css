@@ -1,0 +1,16 @@
+[grid] {
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  &>* {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+[grid*='middle']>* {
+  vertical-align: middle;
+}
