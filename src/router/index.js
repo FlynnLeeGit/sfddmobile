@@ -2,14 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/pages/index'
 
-import assemble from '@/pages/assemble'
-import assembleList from '@/pages/assemble/list'
-import assembleClassic from '@/pages/assemble/classic'
-import assembleCn from '@/pages/assemble/cn'
-import assembleSimple from '@/pages/assemble/simple'
-import assembleAmerica from '@/pages/assemble/america'
-import assembleVr from '@/pages/assemble/_vr'
-import assembleMaterial from '@/pages/assemble/_material'
+const assemble = r => require(['@/pages/assemble'], r)
+const assembleList = r => require(['@/pages/assemble/list'], r)
+const assembleClassic = r => require(['@/pages/assemble/classic'], r)
+const assembleCn = r => require(['@/pages/assemble/cn'], r)
+const assembleSimple = r => require(['@/pages/assemble/simple'], r)
+const assembleAmerica = r => require(['@/pages/assemble/america'], r)
+const assembleVr = r => require(['@/pages/assemble/_vr'], r)
+const assembleMaterial = r => require(['@/pages/assemble/_material'], r)
 
 import ucenter from '@/pages/ucenter'
 import ucContract from '@/pages/ucenter/contract'
