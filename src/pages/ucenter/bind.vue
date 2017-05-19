@@ -20,15 +20,14 @@
 </template>
 
 <script>
-import {Toast, XInput, Group, XButton} from 'vux'
+import {XInput, Group, XButton} from 'vux'
 import axios from '@/plugins/axios'
 
 export default {
   components: {
     XInput,
     Group,
-    XButton,
-    Toast
+    XButton
   },
   data () {
     return {
@@ -93,7 +92,7 @@ export default {
       .catch((err) => {
         this.reflushCaptcha()
         this.phrase = ''
-        this.$vux.toast.text(err.data.message, 'top')
+        this.$vux.toast.show(err.data.message)
       })
     },
     bindMobile () {
@@ -104,8 +103,14 @@ export default {
           mode: 4,
           openId: this.$route.query.openId
         })
+        .then((res) => {
+          this.$router.replace(this.$route.query.callbackUri)
+        })
+        .catch((err) => {
+          this.$vux.toast.show(err.data.message)
+        })
       } else {
-        this.$vux.toast.text('微信用户标识丢失', 'top')
+        this.$vux.toast.show('微信用户标识丢失')
       }
     }
   }
