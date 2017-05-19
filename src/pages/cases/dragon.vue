@@ -25,11 +25,11 @@
           </tab>
         </section>
         <section class="style__bd _tc">
-          <div class="style__content animated fade"
+          <div class="style__content "
                v-for='(sImgs,sIdx) in styleContent'
                v-if='sIdx === currentStyle'
                :key='sIdx'>
-            <div class="style__img"
+            <div class="style__img animated fade slideInUp"
                  v-for='src in sImgs'>
               <img width="100%"
                    :src="src">
@@ -118,24 +118,24 @@
     </market-item>
 
     <!--<market-item>
-        <div class="video">
-          <section class="video__hd _tc"
-                   grid='middle'>
-            <h1 class="Intro__title">了解中孚的三个视频</h1>
-          </section>
-          <section class="video__bd">
-            <video class="video__item"
-                   src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
-            </video>
-            <video class="video__item"
-                   src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
-            </video>
-            <video class="video__item"
-                   src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
-            </video>
-          </section>
-        </div>
-      </market-item>-->
+                <div class="video">
+                  <section class="video__hd _tc"
+                           grid='middle'>
+                    <h1 class="Intro__title">了解中孚的三个视频</h1>
+                  </section>
+                  <section class="video__bd">
+                    <video class="video__item"
+                           src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
+                    </video>
+                    <video class="video__item"
+                           src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
+                    </video>
+                    <video class="video__item"
+                           src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
+                    </video>
+                  </section>
+                </div>
+              </market-item>-->
 
     <market-item>
       <div class="team">
@@ -227,7 +227,7 @@
     </market-item>
 
     <market-item>
-      <frag-contained />
+      <frag-know-assemble />
     </market-item>
 
   </market>
@@ -238,7 +238,7 @@
 <script>
 import Market from '@/components/Market'
 import MarketItem from '@/components/MarketItem'
-import fragContained from '@/components/frag/contained'
+import fragKnowAssemble from '@/components/frag/know-assemble'
 import { Tab, TabItem, Swiper, SwiperItem } from 'vux'
 
 export default {
@@ -249,7 +249,7 @@ export default {
     TabItem,
     Swiper,
     SwiperItem,
-    fragContained
+    fragKnowAssemble
   },
   data () {
     return {

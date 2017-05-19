@@ -1,17 +1,16 @@
 <template>
   <div>
-    <ul class="assemble-hd"
-        v-show='showTabs'>
-      <router-link v-for='tab in tabs'
-                   :key='tab.to'
-                   :to='tab.to'
-                   tag='li'>{{tab.name}}</router-link>
-    </ul>
+    <tab-header :tabs='tabs'
+                v-show='showTabs' />
     <router-view />
   </div>
 </template>
 <script>
+import TabHeader from '@/components/TabHeader'
 export default {
+  components: {
+    TabHeader
+  },
   data () {
     return {
       showTabs: true

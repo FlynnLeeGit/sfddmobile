@@ -14,3 +14,7 @@
 [grid*='middle']>* {
   vertical-align: middle;
 }
+
+[grid*='bottom']>* {
+  vertical-align: bottom;
+}

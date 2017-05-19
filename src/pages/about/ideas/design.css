@@ -1,0 +1,68 @@
+@import '../../../style/mixins.css';
+@b accuracy {
+  @e hd {
+    @mixin px2h 770;
+  }
+  @e bd {
+    video {
+      background-color: #000;
+      @mixin px2h 360;
+      width: auto;
+    }
+  }
+}
+
+@b space {
+  @e hd {
+    @mixin px2h 540;
+  }
+  @e bd {}
+  @e img {
+    @mixin px2h 640;
+  }
+}
+
+@b taste {
+  @mixin bgCover;
+  height: 100%;
+  color: #fff;
+  background-image: url('../../../assets/ideas/design/taste.jpg');
+  @e hd {
+    @mixin px2h 600;
+  }
+}
+
+@b personal {
+  @e hd {
+    padding-top: 45px;
+  }
+  @e bd {
+    padding-top: 10px;
+  }
+  @e img {
+    @mixin px2h 850;
+  }
+}
+
+@b light {
+  height: 100%;
+  color: #fff;
+  @mixin bgCover;
+  background-image: url('../../../assets/ideas/design/lamb.jpg');
+  @e hd {
+    position: relative;
+    top: 60%;
+  }
+}
+
+@b budget {
+  @e hd {
+    padding-top: 45px;
+  }
+  @e bd {
+    padding-top: 10px;
+  }
+  @e img {
+    @mixin px2h 663;
+  }
+}

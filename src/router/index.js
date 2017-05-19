@@ -21,6 +21,13 @@ import ucBind from '@/pages/ucenter/bind'
 
 import customDesignIndex from '@/pages/custom-design/index'
 
+import ideas from '@/pages/about/ideas'
+import ideasDesign from '@/pages/about/ideas/design'
+import ideasMaterial from '@/pages/about/ideas/material'
+import ideasQuality from '@/pages/about/ideas/quality'
+
+import services from '@/pages/about/services'
+
 import caseDragon from '@/pages/cases/dragon'
 
 Vue.use(Router)
@@ -39,6 +46,28 @@ const routes = [
   {
     path: '/cases/dragon',
     component: caseDragon
+  },
+  {
+    path: '/about/ideas',
+    component: ideas,
+    children: [
+      {
+        path: 'design',
+        component: ideasDesign
+      },
+      {
+        path: 'material',
+        component: ideasMaterial
+      },
+      {
+        path: 'quality',
+        component: ideasQuality
+      }
+    ]
+  },
+  {
+    path: '/about/services',
+    component: services
   },
   {
     path: '/assemble',
