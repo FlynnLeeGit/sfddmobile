@@ -9,11 +9,11 @@ import axios from '@/plugins/axios'
 
 export default {
   beforeRouteEnter (to, from, next) {
-    console.log(to)
     const callbackUri = to.path
     if (to.query.code && to.query.state) {
+      console.log('to', to)
       // 用户确认授权 获取用户信息 并执行登录流程
-      axios.post('/_common/tokens', {code: to.query.code, state: to.query.state})
+      axios.post('/_common/tokens', {mode: 3, code: to.query.code, state: to.query.state})
         .then((res) => {
           if (!res.data.sfdd && res.data.wechat) {
             next(`/mobile/ucenter/bind?openId=${res.data.wechat.openId}&callbackUri=${callbackUri}`)

@@ -18,8 +18,8 @@ export default {
     .then((res) => {
       this.data = res.data
     })
-    .catch((err) => {
-      console.log('err', err)
+    .catch((error) => {
+      console.log('ss', error)
     })
   }
 }
