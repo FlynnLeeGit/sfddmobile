@@ -11,12 +11,14 @@ export default {
   beforeRouteEnter (to, from, next) {
     const callbackUri = to.path
     if (to.query.code && to.query.state) {
-      console.log('to', to)
       // 用户确认授权 获取用户信息 并执行登录流程
       axios.post('/_common/tokens', {mode: 3, code: to.query.code, state: to.query.state})
         .then((res) => {
           if (!res.data.sfdd && res.data.wechat) {
-            next(`/mobile/ucenter/bind?openId=${res.data.wechat.openId}&callbackUri=${callbackUri}`)
+            window.location.href = `/mobile/ucenter/bind?openId=${res.data.wechat.attributes.id}&callbackUri=${callbackUri}`
+          }
+          if (res.data.sfdd && res.data.wechat) {
+            next()
           }
         })
       // 获取回来的用户信息 如果只包含微信部分的信息 那么证明该用户并未注册成功 那么继续执行注册绑定流程

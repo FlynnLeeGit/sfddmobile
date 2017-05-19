@@ -4,13 +4,14 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
-import { AlertPlugin } from 'vux'
+import { AlertPlugin, ToastPlugin } from 'vux'
 import AlloyFinger from 'alloyfinger'
 import AlloyFingerVue from 'alloyfinger/vue/alloy_finger.vue'
 window.AlloyFinger = AlloyFinger
 
 Vue.use(AlertPlugin)
 Vue.use(AlloyFingerVue)
+Vue.use(ToastPlugin)
 
 FastClick.attach(document.body)
 
