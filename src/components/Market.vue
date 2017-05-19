@@ -1,6 +1,7 @@
 <template>
   <div class="Market"
-       v-finger:swipe='swipe'>
+       v-finger:swipe='swipe'
+       @touchmove.prevent>
     <slot></slot>
     <img :hide='idx>=len-1'
          class="Market__arrow"

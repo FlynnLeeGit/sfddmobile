@@ -29,4 +29,5 @@ body {
 <style src='./style/animate.css'></style>
 <style src='./style/transitions.css'></style>
 <style src='./style/helpers.css'></style>
-<style src='./style/atoms.css'></style>
+<style src='./style/components/Intro.css'></style>
+<style src='./style/components/Advertise.css'></style>

@@ -13,32 +13,35 @@
 
     <market-item>
       <div class="style">
-        <h1 class="style__title">风格筛选</h1>
-        <tab v-model='currentStyle'
-             active-color='#008489'>
-          <tab-item v-for='(style,idx) in styles'
-                    :key='idx'>{{style}}</tab-item>
-        </tab>
-        <swiper :show-dots="false"
-                height='100vh'
-                v-model='currentStyle'>
-          <swiper-item v-for='sImgs in styleContent'
-                       :key='currentStyle'>
-            <div class="style__content">
-              <div class="style__img"
-                   v-for='img in sImgs'>
-                <img :src='img'
-                     width="100%" />
-              </div>
+        <section class="style__hd _tc"
+                 grid='middle'>
+          <h1 class="Intro__title">风格筛选</h1>
+        </section>
+        <section class="style__tab">
+          <tab v-model='currentStyle'
+               active-color='#008489'>
+            <tab-item v-for='(style,idx) in styles'
+                      :key='idx'>{{style}}</tab-item>
+          </tab>
+        </section>
+        <section class="style__bd _tc">
+          <div class="style__content animated fade"
+               v-for='(sImgs,sIdx) in styleContent'
+               v-if='sIdx === currentStyle'
+               :key='sIdx'>
+            <div class="style__img"
+                 v-for='src in sImgs'>
+              <img width="100%"
+                   :src="src">
             </div>
-          </swiper-item>
-        </swiper>
+          </div>
+        </section>
       </div>
     </market-item>
 
     <market-item>
       <div class="budget">
-        <div class="budget__hd">
+        <div class="budget__hd _tc">
           <h1 class="Intro__title">城开珑庭·中孚空间预算</h1>
           <p class="Intro__desc">施工预算约￥ xxxx/m²，推荐软装约￥dd</p>
         </div>
@@ -93,7 +96,7 @@
 
     <market-item>
       <div class="layout">
-        <section class="layout__hd"
+        <section class="layout__hd _tc"
                  grid='middle'>
           <h1 class="Intro__title">
             城开珑庭·房型设计
@@ -114,29 +117,29 @@
 
     </market-item>
 
-    <market-item>
-      <div class="video">
-        <section class="video__hd"
-                 grid='middle'>
-          <h1 class="Intro__title">了解中孚的三个视频</h1>
-        </section>
-        <section class="video__bd">
-          <video class="video__item"
-                 src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
-          </video>
-          <video class="video__item"
-                 src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
-          </video>
-          <video class="video__item"
-                 src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
-          </video>
-        </section>
-      </div>
-    </market-item>
+    <!--<market-item>
+        <div class="video">
+          <section class="video__hd _tc"
+                   grid='middle'>
+            <h1 class="Intro__title">了解中孚的三个视频</h1>
+          </section>
+          <section class="video__bd">
+            <video class="video__item"
+                   src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
+            </video>
+            <video class="video__item"
+                   src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
+            </video>
+            <video class="video__item"
+                   src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
+            </video>
+          </section>
+        </div>
+      </market-item>-->
 
     <market-item>
       <div class="team">
-        <section class="team__hd"
+        <section class="team__hd _tc"
                  grid='middle'>
           <h1>中孚资深设计团队</h1>
         </section>
@@ -153,7 +156,7 @@
 
     <market-item>
       <div class="flow">
-        <section class="flow__hd"
+        <section class="flow__hd _tc"
                  grid='middle'>
           <div>
             <h1 class="Intro__title">
@@ -221,7 +224,10 @@
 
         </section>
       </div>
+    </market-item>
 
+    <market-item>
+      <frag-contained />
     </market-item>
 
   </market>
@@ -232,6 +238,7 @@
 <script>
 import Market from '@/components/Market'
 import MarketItem from '@/components/MarketItem'
+import fragContained from '@/components/frag/contained'
 import { Tab, TabItem, Swiper, SwiperItem } from 'vux'
 
 export default {
@@ -241,7 +248,8 @@ export default {
     Tab,
     TabItem,
     Swiper,
-    SwiperItem
+    SwiperItem,
+    fragContained
   },
   data () {
     return {

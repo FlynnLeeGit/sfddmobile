@@ -11,15 +11,6 @@
   bottom: 0;
 }
 
-@define-mixin vCenter {
-  &:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-}
-
 @define-mixin px2w $px {
   width: calc( $(px)/ 750 * 100vw);
 }

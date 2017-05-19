@@ -1,0 +1,28 @@
+@import '../mixins.css';
+
+@b Advertise {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  @e mask {
+    @mixin absOverlay;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 1;
+  }
+  @e content {
+    z-index: 2;
+    position: relative;
+  }
+  @e title {
+    font-size: 21px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  @e btn {
+    font-size: 10px;
+    padding: 5px 16px;
+    border: 1px solid;
+    color: #fff;
+  }
+}

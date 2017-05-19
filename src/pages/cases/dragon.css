@@ -12,18 +12,16 @@
 }
 
 @b style {
-  padding-top: 5%;
-  @e title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 2%;
+  @e hd {
+    @mixin px2h 150;
   }
-  @e content {
-    padding-top: 10px;
-    padding-left: 10%;
-    padding-right: 10%;
+  @e tab {}
+  @e bd {
+    padding-top: 20px;
   }
   @e img {
+    display: inline-block;
+    @mixin px2w 600;
     @mixin px2h 500;
     overflow: hidden;
     margin-bottom: 6px;
@@ -43,7 +41,7 @@
     text-align: center;
   }
   @e item {
-    @mixin px2w 289;
+    @mixin px2w 290;
     @mixin px2h 445;
     background-color: #fff;
     &:nth-child(even) {
@@ -63,7 +61,6 @@
 @b layout {
   @e hd {
     @mixin px2h 237;
-    text-align: center;
   }
   @e bd {
     @mixin px2h 1000;
@@ -73,7 +70,6 @@
 @b video {
   @e hd {
     @mixin px2h 175;
-    text-align: center;
   }
   @e bd {
     text-align: center;
@@ -88,7 +84,6 @@
 @b team {
   @e hd {
     @mixin px2h 460;
-    text-align: center;
   }
   @e bd {}
 }
@@ -96,15 +91,14 @@
 @b flow {
   @e hd {
     @mixin px2h 500;
-    text-align: center;
   }
 }
 
 @b flow-icons {
   padding: 0 25px;
   text-align: center;
+  margin-bottom: 3vh;
   @e li {
-    text-align: center;
     h3 {
       font-size: 12px;
     }
