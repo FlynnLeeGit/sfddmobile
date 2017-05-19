@@ -11,24 +11,24 @@ const assembleAmerica = r => require(['@/pages/assemble/america'], r)
 const assembleVr = r => require(['@/pages/assemble/_vr'], r)
 const assembleMaterial = r => require(['@/pages/assemble/_material'], r)
 
-import ucenter from '@/pages/ucenter'
-import ucContract from '@/pages/ucenter/contract'
-import ucMaterial from '@/pages/ucenter/material'
-import ucProgress from '@/pages/ucenter/progress'
-import ucAfterSales from '@/pages/ucenter/aftersales'
-import ucLoan from '@/pages/ucenter/loan'
-import ucBind from '@/pages/ucenter/bind'
+const ucenter = r => require(['@/pages/ucenter'], r)
+const ucContract = r => require(['@/pages/ucenter/contract'], r)
+const ucMaterial = r => require(['@/pages/ucenter/material'], r)
+const ucProgress = r => require(['@/pages/ucenter/progress'], r)
+const ucAfterSales = r => require(['@/pages/ucenter/aftersales'], r)
+const ucLoan = r => require(['@/pages/ucenter/loan'], r)
+const ucBind = r => require(['@/pages/ucenter/bind'], r)
 
-import customDesignIndex from '@/pages/custom-design/index'
+const customDesignIndex = r => require(['@/pages/custom-design/index'], r)
 
-import ideas from '@/pages/about/ideas'
-import ideasDesign from '@/pages/about/ideas/design'
-import ideasMaterial from '@/pages/about/ideas/material'
-import ideasQuality from '@/pages/about/ideas/quality'
+const ideas = r => require(['@/pages/about/ideas'], r)
+const ideasDesign = r => require(['@/pages/about/ideas/design'], r)
+const ideasMaterial = r => require(['@/pages/about/ideas/material'], r)
+const ideasQuality = r => require(['@/pages/about/ideas/quality'], r)
 
-import services from '@/pages/about/services'
+const services = r => require(['@/pages/about/services'], r)
 
-import caseDragon from '@/pages/cases/dragon'
+const caseDragon = r => require(['@/pages/cases/dragon'], r)
 
 Vue.use(Router)
 import { base } from '../../localConfig'
