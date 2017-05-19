@@ -1,8 +1,10 @@
+@import '../../style/mixins.css';
 @b what {
-  padding-top: 8%;
-  text-align: center;
+  @e hd {
+    @mixin px2h 580;
+  }
   @e img {
-    margin-top: 20px;
+    @mixin px2h 666;
   }
 }
 
@@ -23,9 +25,10 @@
 }
 
 @b flow {
-  padding-top: 8%;
-  text-align: center;
+  @e hd {
+    @mixin px2h 295;
+  }
   @e img {
-    margin-top: 30px;
+    @mixin px2h 946;
   }
 }
