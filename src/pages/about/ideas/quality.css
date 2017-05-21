@@ -1,0 +1,65 @@
+@import '../../../style/mixins.css';
+@b top {
+  @mixin bgCover;
+  background-image: url('../../../assets/ideas/quality/top.jpg');
+  height: 100%;
+  @e txt {
+    position: absolute;
+    width: 100%;
+    bottom: 11%;
+    font-size: 10px;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+@b line {
+  @e hd {
+    @mixin px2h 734;
+  }
+  @e video {
+    @mixin px2h 360;
+  }
+}
+
+@b accuracy {
+  @e hd {
+    @mixin px2h 734;
+  }
+  @e video {
+    @mixin px2h 360;
+  }
+}
+
+@b tri {
+  height: 100%;
+  background-color: #f7f7f7;
+  @e hd {
+    @mixin px2h 734;
+  }
+  @e bd {}
+  @e img {
+    @mixin px2h 448;
+  }
+}
+
+@b team {
+  height: 100%;
+  background-image: url('../../../assets/ideas/quality/team.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center bottom;
+  @e hd {
+    @mixin px2h 660;
+  }
+}
+
+@b flow {
+  @e hd {
+    @mixin px2h 600;
+  }
+  @e bd {}
+  @e img {
+    @mixin px2h 655;
+  }
+}

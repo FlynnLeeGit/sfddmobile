@@ -2,9 +2,17 @@
   background-image: url('../../assets/assemble/america/hall.jpg');
 }
 
+.webp .assemble-top__img {
+  background-image: url('../../assets/assemble/america/webp/hall.webp');
+}
+
 .assemble-sub {
   padding-top: 40%;
   background-image: url('../../assets/assemble/america/sub.jpg');
+}
+
+.webp .assemble-sub {
+  background-image: url('../../assets/assemble/america/webp/sub.webp');
 }
 
 .hall {
@@ -16,6 +24,10 @@
   }
 }
 
+.webp .hall .assemble-space__img {
+  background-image: url('../../assets/assemble/america/webp/hall.webp');
+}
+
 .dining-room {
   .assemble-space__img {
     background-image: url('../../assets/assemble/america/dining-room.jpg');
@@ -23,6 +35,10 @@
   .assemble-space__bg {
     left: -15%;
   }
+}
+
+.webp .dining-room .assemble-space__img {
+  background-image: url('../../assets/assemble/america/webp/dining-room.webp');
 }
 
 @b bedroom {
@@ -38,6 +54,14 @@
   }
 }
 
+.webp .bedroom .assemble-space__img {
+  background-image: url('../../assets/assemble/america/webp/bedroom.webp');
+}
+
 .assemble-ft {
   background-image: url('../../assets/assemble/america/ft.jpg');
+}
+
+.webp .assemble-ft {
+  background-image: url('../../assets/assemble/america/webp/ft.webp');
 }

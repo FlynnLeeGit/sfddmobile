@@ -5,6 +5,7 @@ import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
 import { AlertPlugin, ToastPlugin } from 'vux'
+import './plugins/modernizr-custom'
 import AlloyFinger from 'alloyfinger'
 import AlloyFingerVue from 'alloyfinger/vue/alloy_finger.vue'
 window.AlloyFinger = AlloyFinger
