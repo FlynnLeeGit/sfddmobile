@@ -19,9 +19,11 @@
           </div>
         </section>
         <section class="what__bd _tc">
-          <img class="what__img  animated fade"
-               src="../../assets/custom-design/what.png"
-               alt="">
+          <picture>
+            <img class="what__img  animated fade"
+                 src="../../assets/custom-design/what.png"
+                 alt="">
+          </picture>
         </section>
       </div>
     </market-item>
@@ -42,10 +44,14 @@
             <br> 居住者多或决策人多
           </span>
         </p>
-        <img class="who__img  animated fade"
-             src="../../assets/custom-design/who.jpg"
-             width="100%"
-             alt="">
+        <picture>
+          <source type="image/webp"
+                  srcset="../../assets/custom-design/who.jpg.webp">
+          <img class="who__img  animated fade"
+               src="../../assets/custom-design/who.jpg"
+               width="100%"
+               alt="">
+        </picture>
       </div>
     </market-item>
 
@@ -65,8 +71,10 @@
 
         </section>
         <section class="flow__bd _tc">
-          <img class="flow__img  animated fade"
-               src="../../assets/custom-design/flow.png">
+          <picture>
+            <img class="flow__img  animated fade"
+                 src="../../assets/custom-design/flow.png">
+          </picture>
         </section>
       </div>
     </market-item>

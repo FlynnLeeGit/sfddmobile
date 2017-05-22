@@ -10,6 +10,9 @@
     </div>
   </div>
 </template>
+
+<style src='./know-previous.css'></style>
+
 <style>
 .know-previous {
   background-image: url('../../assets/know-previous.jpg');

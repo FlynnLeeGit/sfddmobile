@@ -1,0 +1,4 @@
+@import '../../style/mixins.css';
+.count-down {
+  @mixin bgWebp count-down.jpg;
+}

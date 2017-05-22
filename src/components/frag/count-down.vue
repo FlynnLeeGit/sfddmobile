@@ -20,11 +20,7 @@
   </div>
 </template>
 
-<style>
-.count-down {
-  background-image: url('../../assets/count-down.jpg');
-}
-</style>
+<style src='./count-down.css'></style>
 
 <script>
 export default {

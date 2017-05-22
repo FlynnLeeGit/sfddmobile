@@ -2,9 +2,11 @@
   <market class="dragon">
     <market-item>
       <div class="top">
-        <img class="animated fade"
-             src="../../assets/cases/dragon/top-txt.png"
-             width="80%">
+        <picture>
+          <img class="animated fade"
+               src="../../assets/cases/dragon/top-txt.png"
+               width="80%">
+        </picture>
         <p class="animated fade slideInUp">
           装修-设计-施工-预算-方案-官方推荐
         </p>
@@ -118,24 +120,24 @@
     </market-item>
 
     <!--<market-item>
-                <div class="video">
-                  <section class="video__hd _tc"
-                           grid='middle'>
-                    <h1 class="Intro__title">了解中孚的三个视频</h1>
-                  </section>
-                  <section class="video__bd">
-                    <video class="video__item"
-                           src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
-                    </video>
-                    <video class="video__item"
-                           src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
-                    </video>
-                    <video class="video__item"
-                           src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
-                    </video>
-                  </section>
-                </div>
-              </market-item>-->
+                  <div class="video">
+                    <section class="video__hd _tc"
+                             grid='middle'>
+                      <h1 class="Intro__title">了解中孚的三个视频</h1>
+                    </section>
+                    <section class="video__bd">
+                      <video class="video__item"
+                             src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
+                      </video>
+                      <video class="video__item"
+                             src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
+                      </video>
+                      <video class="video__item"
+                             src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
+                      </video>
+                    </section>
+                  </div>
+                </market-item>-->
 
     <market-item>
       <div class="team">

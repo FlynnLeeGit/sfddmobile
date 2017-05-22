@@ -1,0 +1,45 @@
+@import '../../../style/mixins.css';
+@b logos {
+  @e hd {
+    @mixin px2h 940;
+  }
+}
+
+.material-item {
+  @mixin bgCover;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+}
+
+@b forest {
+  @mixin bgWebp ideas/material/forest.jpg;
+  padding-bottom: 90px;
+}
+
+@b paint {
+  @mixin bgWebp ideas/material/paint.jpg;
+}
+
+@b woodwork {
+  @mixin bgWebp ideas/material/woodwork.jpg;
+  padding-top: 45px;
+}
+
+@b bath {
+  @mixin bgWebp ideas/material/bath.jpg;
+  @e content {
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+  }
+}
+
+@b floor {
+  @mixin bgWebp ideas/material/floor.jpg;
+  padding-bottom: 60px;
+}
+
+@b tile {
+  @mixin bgWebp ideas/material/tile.jpg;
+  padding-bottom: 100px;
+}

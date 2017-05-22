@@ -15,9 +15,4 @@
   </div>
 </template>
 
-<style>
-.know-assemble {
-  background-image: url('../../assets/contained.jpg');
-}
-</style>
-
+<style src='./know-assemble.css'></style>

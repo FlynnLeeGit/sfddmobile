@@ -121,7 +121,7 @@
     </market-item>
 
     <market-item>
-      <frag-count-down></frag-count-down>
+      <frag-count-down />
     </market-item>
 
   </market>
