@@ -44,7 +44,17 @@ watcher.on('all', (event, path) => {
     case 'change':
       if (fs.statSync(path).size > minImgSize) {
         generateWebpImg(path, status => {
-          log('生成图片' + getWebpImgName(path) + status)
+          const webpSize = fs.statSync(getWebpImgName(path)).size
+          const originalSize = fs.statSync(path).size
+          log(
+            `${getWebpImgName(path)} ${parseInt(originalSize / 1024)}kb -> ${parseInt(webpSize / 1024)}kb`
+          )
+          if (webpSize > originalSize) {
+            log(`webp生成的图片更大,删除${getWebpImgName(path)}`)
+            deleteWebpImg(getWebpImgName(path), status => {
+              log('删除图片', getWebpImgName(path), status)
+            })
+          }
         })
       }
       break
@@ -75,10 +85,10 @@ function generateWebpImg (path, cb) {
 function deleteWebpImg (path, cb) {
   fs.unlink(path, err => {
     if (err) {
-      cb('失败')
+      cb('删除失败')
       log(err)
     } else {
-      cb('成功')
+      cb('删除成功')
     }
   })
 }
