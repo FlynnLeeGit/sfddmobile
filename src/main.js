@@ -7,6 +7,7 @@ import router from './router'
 import { AlertPlugin, ToastPlugin } from 'vux'
 // for detect webp
 import './plugins/modernizr-custom'
+import './plugins/vue-lazy'
 import AlloyFinger from 'alloyfinger'
 import AlloyFingerVue from 'alloyfinger/vue/alloy_finger.vue'
 window.AlloyFinger = AlloyFinger

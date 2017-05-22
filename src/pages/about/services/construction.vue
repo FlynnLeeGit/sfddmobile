@@ -18,7 +18,7 @@
    </market>
 </template>
 
-<style src='./us.css'></style>
+<style src='./construction.css'></style>
 
 <script>
 import Market from '@/components/Market'

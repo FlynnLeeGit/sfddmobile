@@ -15,25 +15,20 @@ const chokidar = require('chokidar')
 const log = console.log.bind(console)
 
 const minImgSize = 10000
-let quality = 75 // webp图片质量，默认75
-let imgDir = 'src/assets' // 默认图片文件夹
+const quality = 75 // webp图片质量，默认75
+const imgDir = 'src/assets' // 默认图片文件夹
 const ignoredFiles = /(^\..+)|(.+[\/\\]\..+)|(.+?\.webp$)|(\.(mp3|ogg))/
 
 // 得到对应的webp格式的文件名，默认为文件名后加上.webp
-function getWebpImgName (path) {
-  return `${path}.webp`
-}
+const getWebpImgName = path => `${path}.webp`
 
 // 得到shell命令
-function getShellCmd (path) {
-  return `cwebp -q ${quality} ${path} -o ${getWebpImgName(path)}`
-}
+const getShellCmd = path =>
+  `cwebp -q ${quality} ${path} -o ${getWebpImgName(path)}`
 
 // 监控文件夹
-var watcher = chokidar.watch(imgDir, {
-  ignored: path => {
-    return ignoredFiles.test(path)
-  },
+const watcher = chokidar.watch(imgDir, {
+  ignored: path => ignoredFiles.test(path),
   persistent: true // 保持监听状态
 })
 
@@ -72,7 +67,7 @@ log('biubiubiu~~~ 监控已经启动')
 
 function generateWebpImg (path, cb) {
   process.exec(getShellCmd(path), err => {
-    if (err !== null) {
+    if (err) {
       cb('失败')
       log('请先运行cwebp -h命令检查cwebp是否安装ok。')
       log(err)

@@ -20,6 +20,7 @@ const ucLoan = r => require(['@/pages/ucenter/loan'], r)
 const ucBind = r => require(['@/pages/ucenter/bind'], r)
 
 const customDesignIndex = r => require(['@/pages/custom-design/index'], r)
+const customDesignVrlist = r => require(['@/pages/custom-design/vrlist'], r)
 
 const ideas = r => require(['@/pages/about/ideas'], r)
 const ideasDesign = r => require(['@/pages/about/ideas/design'], r)
@@ -27,6 +28,11 @@ const ideasMaterial = r => require(['@/pages/about/ideas/material'], r)
 const ideasQuality = r => require(['@/pages/about/ideas/quality'], r)
 
 const services = r => require(['@/pages/about/services'], r)
+const servicesZero = r => require(['@/pages/about/services/zero'], r)
+const servicesSee = r => require(['@/pages/about/services/see'], r)
+const servicesLoan = r => require(['@/pages/about/services/loan'], r)
+const servicesConstruction = r =>
+  require(['@/pages/about/services/construction'], r)
 
 const caseDragon = r => require(['@/pages/cases/dragon'], r)
 
@@ -42,6 +48,10 @@ const routes = [
   {
     path: '/custom-design',
     component: customDesignIndex
+  },
+  {
+    path: '/custom-design/vrlist',
+    component: customDesignVrlist
   },
   {
     path: '/cases/dragon',
@@ -67,7 +77,25 @@ const routes = [
   },
   {
     path: '/about/services',
-    component: services
+    component: services,
+    children: [
+      {
+        path: 'zero',
+        component: servicesZero
+      },
+      {
+        path: 'see',
+        component: servicesSee
+      },
+      {
+        path: 'loan',
+        component: servicesLoan
+      },
+      {
+        path: 'loan',
+        component: servicesConstruction
+      }
+    ]
   },
   {
     path: '/assemble',
