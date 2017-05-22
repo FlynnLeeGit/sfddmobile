@@ -1,44 +1,30 @@
-.assemble-top__img {
-  background-image: url('../../assets/assemble/america/hall.jpg');
-}
+@import '../../style/mixins.css';
 
-.webp .assemble-top__img {
-  background-image: url('../../assets/assemble/america/webp/hall.webp');
+.assemble-top__img {
+  @mixin bgWebp assemble/america/hall.jpg;
 }
 
 .assemble-sub {
   padding-top: 40%;
-  background-image: url('../../assets/assemble/america/sub.jpg');
-}
-
-.webp .assemble-sub {
-  background-image: url('../../assets/assemble/america/webp/sub.webp');
+  @mixin bgWebp assemble/america/sub.jpg;
 }
 
 .hall {
   .assemble-space__img {
-    background-image: url('../../assets/assemble/america/hall.jpg');
+    @mixin bgWebp assemble/america/hall.jpg;
   }
   .assemble-space__bg {
     right: -15%;
   }
 }
 
-.webp .hall .assemble-space__img {
-  background-image: url('../../assets/assemble/america/webp/hall.webp');
-}
-
 .dining-room {
   .assemble-space__img {
-    background-image: url('../../assets/assemble/america/dining-room.jpg');
+    @mixin bgWebp assemble/america/dining-room.jpg;
   }
   .assemble-space__bg {
     left: -15%;
   }
-}
-
-.webp .dining-room .assemble-space__img {
-  background-image: url('../../assets/assemble/america/webp/dining-room.webp');
 }
 
 @b bedroom {
@@ -50,18 +36,10 @@
     top: 48%;
   }
   .assemble-space__img {
-    background-image: url('../../assets/assemble/america/bedroom.jpg');
+    @mixin bgWebp assemble/america/bedroom.jpg;
   }
 }
 
-.webp .bedroom .assemble-space__img {
-  background-image: url('../../assets/assemble/america/webp/bedroom.webp');
-}
-
 .assemble-ft {
-  background-image: url('../../assets/assemble/america/ft.jpg');
-}
-
-.webp .assemble-ft {
-  background-image: url('../../assets/assemble/america/webp/ft.webp');
+  @mixin bgWebp assemble/america/ft.jpg;
 }

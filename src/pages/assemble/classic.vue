@@ -119,7 +119,7 @@
 <script>
 import Market from '@/components/Market'
 import MarketItem from '@/components/MarketItem'
-import bgAudio from '@/assets/assemble/classic/bg.mp3'
+import bgAudio from '@/assets/assemble/classic/bg.ogg'
 
 export default {
   components: {

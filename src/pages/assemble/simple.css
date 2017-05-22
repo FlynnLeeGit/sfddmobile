@@ -1,16 +1,17 @@
+@import '../../style/mixins.css';
 .assemble-top__img {
-  background-image: url('../../assets/assemble/simple/hall.jpg');
+  @mixin bgWebp assemble/simple/hall.jpg;
 }
 
 .assemble-sub {
   padding-top: 20%;
   color: #333;
-  background-image: url('../../assets/assemble/simple/sub.jpg');
+  @mixin bgWebp assemble/simple/sub.jpg;
 }
 
 .hall {
   .assemble-space__img {
-    background-image: url('../../assets/assemble/simple/hall.jpg');
+    @mixin bgWebp assemble/simple/hall.jpg;
   }
   .assemble-space__bg {
     width: 370px;
@@ -21,7 +22,7 @@
 
 .dining-room {
   .assemble-space__img {
-    background-image: url('../../assets/assemble/simple/dining-room.jpg');
+    @mixin bgWebp assemble/simple/dining-room.jpg;
   }
   .assemble-space__bg {
     width: 300px;
@@ -33,7 +34,7 @@
 
 .bedroom {
   .assemble-space__img {
-    background-image: url('../../assets/assemble/simple/bedroom.jpg');
+    @mixin bgWebp assemble/simple/bedroom.jpg;
   }
   .assemble-space__bg {
     width: 300px;
@@ -45,5 +46,5 @@
 
 .assemble-ft {
   color: #333;
-  background-image: url('../../assets/assemble/simple/ft.jpg');
+  @mixin bgWebp assemble/simple/ft.jpg;
 }

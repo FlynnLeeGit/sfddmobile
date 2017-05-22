@@ -10,7 +10,10 @@ module.exports = {
       : config.dev.cssSourceMap,
     extract: isProduction
   }),
-  postcss: [
-    require('postcss-salad')(saladConf)
-  ]
+  postcss: [require('postcss-salad')(saladConf)],
+  transformToRequire: {
+    img: 'src',
+    // for webp support
+    source: 'srcset'
+  }
 }

@@ -115,7 +115,7 @@ export default {
   },
   data () {
     return {
-      bgAudio: require('@/assets/assemble/america/bg.mp3')
+      bgAudio: require('@/assets/assemble/america/bg.ogg')
     }
   }
 }

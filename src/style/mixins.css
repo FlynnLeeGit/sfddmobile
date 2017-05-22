@@ -18,3 +18,15 @@
 @define-mixin px2h $px {
   height: calc( $(px)/ 1334 * 100vh);
 }
+
+@define-mixin bgWebp $url {
+  & {
+    background-image: url(../assets/$(url));
+  }
+  /** css-next rule **/
+  @media (width>=0px) {
+    .webp & {
+      background-image: url(../assets/$(url).webp)
+    }
+  }
+}
