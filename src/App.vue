@@ -31,3 +31,4 @@ body {
 <style src='./style/helpers.css'></style>
 <style src='./style/components/Intro.css'></style>
 <style src='./style/components/Advertise.css'></style>
+<style src='./style/components/Article.css'></style>

@@ -3,7 +3,7 @@
     <li class="TabFilter__item"
         v-for='(tab,tabIdx) in tabs'
         :key='tab.tag'>
-      {{tab.name}}
+      {{ getTabName(tab,tabIdx) }}
       <select v-model='selected[tabIdx]'
               class="TabFilter__select">
         <option v-for='(fname,fval) in tab.filter'
@@ -20,6 +20,10 @@ export default {
     tabs: {
       type: Array,
       default: () => []
+    },
+    mode: {
+      type: String,
+      default: 'query'
     }
   },
   data () {
@@ -27,14 +31,27 @@ export default {
       selected: []
     }
   },
+  methods: {
+    getTabName (tab, tabIdx) {
+      const sKey = this.selected[tabIdx]
+      return sKey ? tab.filter[sKey] : tab.name
+    }
+  },
   watch: {
     selected (newSelected) {
-      const newQuery = {}
+      const newOpts = {}
       newSelected.forEach((sel, idx) => {
         const fTag = this.tabs[idx].tag
-        newQuery[fTag] = sel
+        newOpts[fTag] = sel
       })
-      this.$router.push({ query: newQuery })
+      if (this.mode === 'query') {
+        this.$router.replace({ query: newOpts })
+      }
+      if (this.mode === 'params') {
+        this.$router.replace({
+          params: Object.assign(this.$route.params, newOpts)
+        })
+      }
     }
   }
 }

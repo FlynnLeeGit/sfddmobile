@@ -2,7 +2,6 @@
   <div class="vrlist">
     <tab-filter :tabs='tabs' />
     <ul>
-
       <li class="Article"
           v-for='vr in vrs'
           :key='vr.id'>
@@ -12,12 +11,10 @@
           <p class="Article__desc">
             {{vr.title}}
           </p>
-          <p class="Article__view-all">View All</p>
+          <p class="Article__view-all">View 360 VR</p>
         </a>
       </li>
-
     </ul>
-
   </div>
 </template>
 <style src='./vrlist.css'></style>

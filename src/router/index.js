@@ -10,6 +10,8 @@ const assembleSimple = r => require(['@/pages/assemble/simple'], r)
 const assembleAmerica = r => require(['@/pages/assemble/america'], r)
 const assembleVr = r => require(['@/pages/assemble/_vr'], r)
 const assembleMaterial = r => require(['@/pages/assemble/_material'], r)
+const assembleMaterialSpace = r =>
+  require(['@/pages/assemble/_material-sid'], r)
 
 const ucenter = r => require(['@/pages/ucenter'], r)
 const ucContract = r => require(['@/pages/ucenter/contract'], r)
@@ -126,8 +128,15 @@ const routes = [
         component: assembleVr
       },
       {
-        path: 'material/:style?',
-        component: assembleMaterial
+        path: 'material/:style',
+        component: assembleMaterial,
+        children: [
+          {
+            path: ':sid',
+            name: 'assemble-material-sid',
+            component: assembleMaterialSpace
+          }
+        ]
       }
     ]
   },
