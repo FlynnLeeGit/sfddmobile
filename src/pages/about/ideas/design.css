@@ -24,9 +24,9 @@
 
 @b taste {
   @mixin bgCover;
+  @mixin bgWebp ideas/design/taste.jpg;
   height: 100%;
   color: #fff;
-  background-image: url('../../../assets/ideas/design/taste.jpg');
   @e hd {
     @mixin px2h 600;
   }
@@ -45,10 +45,10 @@
 }
 
 @b light {
+  @mixin bgCover;
+  @mixin bgWebp ideas/design/lamb.jpg;
   height: 100%;
   color: #fff;
-  @mixin bgCover;
-  background-image: url('../../../assets/ideas/design/lamb.jpg');
   @e hd {
     position: relative;
     top: 60%;

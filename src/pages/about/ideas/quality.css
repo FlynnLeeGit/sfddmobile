@@ -1,7 +1,7 @@
 @import '../../../style/mixins.css';
 @b top {
   @mixin bgCover;
-  background-image: url('../../../assets/ideas/quality/top.jpg');
+  @mixin bgWebp ideas/quality/top.jpg;
   height: 100%;
   @e txt {
     position: absolute;
@@ -45,7 +45,7 @@
 
 @b team {
   height: 100%;
-  background-image: url('../../../assets/ideas/quality/team.png');
+  @mixin bgWebp ideas/quality/team.png;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center bottom;

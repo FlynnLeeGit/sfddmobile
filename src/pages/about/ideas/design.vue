@@ -39,8 +39,12 @@
           </div>
         </section>
         <section class="space__bd _tc">
-          <img src="../../../assets/ideas/design/space.jpg"
-               class="space__img">
+          <picture>
+            <source type='image/webp'
+                    srcset='../../../assets/ideas/design/space.jpg.webp'>
+            <img src="../../../assets/ideas/design/space.jpg"
+                 class="space__img">
+          </picture>
         </section>
       </div>
     </market-item>
@@ -76,9 +80,12 @@
           </div>
         </section>
         <section class="personal__bd _tc">
-          <img src="../../../assets/ideas/design/personal.jpg"
-               alt=""
-               class="personal__img">
+          <picture>
+            <source type='image/webp'
+                    srcset='../../../assets/ideas/design/personal.jpg.webp'>
+            <img src="../../../assets/ideas/design/personal.jpg"
+                 class="personal__img">
+          </picture>
         </section>
       </div>
     </market-item>
@@ -114,8 +121,12 @@
           </div>
         </section>
         <section class="budget__bd _tc">
-          <img src="../../../assets/ideas/design/budget.jpg"
-               class="budget__img">
+          <picture>
+            <source type='image/webp'
+                    srcset='../../../assets/ideas/design/budget.jpg.webp'>
+            <img src="../../../assets/ideas/design/budget.jpg"
+                 class="budget__img">
+          </picture>
         </section>
       </div>
     </market-item>

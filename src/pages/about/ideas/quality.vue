@@ -80,8 +80,12 @@
           </div>
         </section>
         <section class="tri__bd _tc">
-          <img src="../../../assets/ideas/quality/tri.jpg"
-               class="tri__img">
+          <picture>
+            <source type='image/webp'
+                    srcset='../../../assets/ideas/quality/tri.jpg.webp'>
+            <img src="../../../assets/ideas/quality/tri.jpg"
+                 class="tri__img">
+          </picture>
         </section>
       </div>
     </market-item>
@@ -118,8 +122,12 @@
           </div>
         </section>
         <section class="flow__bd _tc">
-          <img src="../../../assets/ideas/quality/flow.jpg"
-               class="flow__img">
+          <picture>
+            <source type='image/webp'
+                    srcset='../../../assets/ideas/quality/flow.jpg.webp'>
+            <img src="../../../assets/ideas/quality/flow.jpg"
+                 class="flow__img">
+          </picture>
         </section>
       </div>
     </market-item>
