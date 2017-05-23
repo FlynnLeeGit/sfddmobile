@@ -24,7 +24,7 @@
        "sub_button":[{
            "type":"view",
            "name":"理念",
-           "url":"http://staging.sfdd.com/mobile/about/ideas"
+           "url":"http://staging.sfdd.com/mobile/about/ideas/design"
         },
         {
            "type":"view",
@@ -39,7 +39,7 @@
         {
            "type":"view",
            "name":"部分作品",
-           "url":"http://staging.sfdd.com/mobile/vrlist"
+           "url":"http://staging.sfdd.com/mobile/custom-design/vrlist"
         }]
    },
    {

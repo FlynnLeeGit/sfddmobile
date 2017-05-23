@@ -69,7 +69,6 @@ export default {
         index: index
       }, this.options)
       this.photoswipe = new PhotoSwipe(this.$el, UI, this.list, options)
-      console.lot(this.photoswipe)
       this.photoswipe.init()
       this.photoswipe.listen('close', () => {
         this.$emit('on-close')
