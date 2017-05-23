@@ -1,6 +1,9 @@
 @import '../../style/mixins.css';
 @b inspiration {
   padding-top: 45px;
+  @e ft {
+    margin-top: 20%;
+  }
 }
 
 @b ins-item {
@@ -8,7 +11,7 @@
   padding: 5px;
   @e img {
     @mixin bgCover;
-    @mixin px2h 280;
+    padding-top: 67%;
     background-color: #f7f7f7;
   }
 }
