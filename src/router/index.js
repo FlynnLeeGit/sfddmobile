@@ -23,6 +23,8 @@ const ucBind = r => require(['@/pages/ucenter/bind'], r)
 
 const customDesignIndex = r => require(['@/pages/custom-design/index'], r)
 const customDesignVrlist = r => require(['@/pages/custom-design/vrlist'], r)
+const customDesignInspiration = r =>
+  require(['@/pages/custom-design/inspiration'], r)
 
 const ideas = r => require(['@/pages/about/ideas'], r)
 const ideasDesign = r => require(['@/pages/about/ideas/design'], r)
@@ -37,11 +39,16 @@ const servicesConstruction = r =>
   require(['@/pages/about/services/construction'], r)
 
 const caseDragon = r => require(['@/pages/cases/dragon'], r)
+const notFound = r => require(['@/pages/404'], r)
 
 Vue.use(Router)
 import { base } from '../../localConfig'
 
 const routes = [
+  {
+    path: '*',
+    component: notFound
+  },
   {
     path: '/',
     name: 'Hello',
@@ -54,6 +61,10 @@ const routes = [
   {
     path: '/custom-design/vrlist',
     component: customDesignVrlist
+  },
+  {
+    path: '/custom-design/inspiration',
+    component: customDesignInspiration
   },
   {
     path: '/cases/dragon',

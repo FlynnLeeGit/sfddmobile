@@ -1,0 +1,14 @@
+@import '../../style/mixins.css';
+@b inspiration {
+  padding-top: 45px;
+}
+
+@b ins-item {
+  width: 50%;
+  padding: 5px;
+  @e img {
+    @mixin bgCover;
+    @mixin px2h 280;
+    background-color: #f7f7f7;
+  }
+}
