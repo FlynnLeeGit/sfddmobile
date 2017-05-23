@@ -13,6 +13,12 @@
     @mixin px2h 280;
     @mixin bgCover;
     margin-top: 10px;
+    text-align: center;
+    background-color: #f7f7f7;
+    &.-edge {
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
   }
   @e desc {
     margin-top: 20px;

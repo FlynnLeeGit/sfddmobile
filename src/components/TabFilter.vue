@@ -31,10 +31,35 @@ export default {
       selected: []
     }
   },
+  computed: {
+    isQueryMode () {
+      return this.mode === 'query'
+    },
+    isParamsMode () {
+      return this.mode === 'params'
+    }
+  },
   methods: {
     getTabName (tab, tabIdx) {
       const sKey = this.selected[tabIdx]
       return sKey ? tab.filter[sKey] : tab.name
+    },
+    updateSelected (newTabs) {
+      let filters
+      if (this.isQueryMode) {
+        filters = this.$route.query
+      }
+      if (this.isParamsMode) {
+        filters = this.$route.params
+      }
+      // 通过新的饿tabs更新selected值
+      newTabs.forEach((tab, tabIdx) => {
+        Object.keys(filters).forEach(fKey => {
+          if (fKey === tab.tag) {
+            this.selected[tabIdx] = filters[fKey]
+          }
+        })
+      })
     }
   },
   watch: {
@@ -44,15 +69,24 @@ export default {
         const fTag = this.tabs[idx].tag
         newOpts[fTag] = sel
       })
-      if (this.mode === 'query') {
-        this.$router.replace({ query: newOpts })
-      }
-      if (this.mode === 'params') {
+      // 路由中添加参数
+      if (this.isQueryMode) {
         this.$router.replace({
-          params: Object.assign(this.$route.params, newOpts)
+          query: Object.assign({}, this.$route.query, newOpts)
         })
       }
+      if (this.isParamsMode) {
+        this.$router.replace({
+          params: Object.assign({}, this.$route.params, newOpts)
+        })
+      }
+    },
+    tabs (newTabs) {
+      this.updateSelected(newTabs)
     }
+  },
+  created () {
+    this.selected.length = this.tabs.length
   }
 }
 </script>
