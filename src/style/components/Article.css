@@ -10,14 +10,11 @@
     line-height: 25px;
   }
   @e img {
-    @mixin px2h 280;
     @mixin bgCover;
+    padding-top: 60%;
     margin-top: 10px;
     text-align: center;
-    background-color: #f7f7f7;
-  }
-  @e x-img {
-    width: 100%;
+    position: relative;
   }
   @e desc {
     margin-top: 20px;
@@ -29,4 +26,15 @@
     font-size: 12px;
     margin-top: 30px;
   }
+}
+
+.edge-content {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }

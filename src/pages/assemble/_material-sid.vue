@@ -6,9 +6,10 @@
           @click='showDialog(m)'
           v-for='m in materials'>
         <h1 class="Article__title">{{m.name}}</h1>
-        <x-img class="Article__x-img"
-               :src="imgFilter(m.img,'case600')">
-        </x-img>
+        <div class="Article__img"
+             v-lazy.bg.edge="imgFilter(m.img,'case600')">
+          <div class="edge-content"></div>
+        </div>
         <p class="Article__desc">
           {{m.description}}
         </p>

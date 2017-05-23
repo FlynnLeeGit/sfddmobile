@@ -8,10 +8,15 @@ const getEdgeColor = url =>
     img.src = url
     img.onload = () => {
       ctx.drawImage(img, 0, 0, img.width, img.height)
-      const [r, g, b, a] = ctx.getImageData(0, 0, 1, 1).data
+
+      const topColor = ctx.getImageData(0, 0, 1, 1).data
+      const bottomColor = ctx.getImageData(0, img.height - 1, 1, 1).data
       img = null
       ctx = null
-      resolve(`rgba(${r},${g},${b},${a})`)
+      resolve({
+        top: topColor,
+        bottom: bottomColor
+      })
     }
   })
 
@@ -46,8 +51,12 @@ class LoadEl {
     this.el.style.backgroundImage = `url(${this.binding.value})`
   }
   loadEdge () {
-    getEdgeColor(this.binding.value).then(rgba => {
-      this.el.style.backgroundColor = rgba
+    getEdgeColor(this.binding.value).then(({ top, bottom }) => {
+      const [topR, topG, topB, topA] = top
+      const [bottomR, bottomG, bottomB, bottomA] = bottom
+      this.el.style.backgroundImage = `linear-gradient(rgba(${topR},${topG},${topB},${topA}) 0%,rgba(${bottomR},${bottomG},${bottomB},${bottomA}) 100%)`
+      const edgeContent = this.el.querySelector('.edge-content')
+      edgeContent.style.backgroundImage = `url(${this.binding.value})`
     })
   }
   loadAnimate () {
