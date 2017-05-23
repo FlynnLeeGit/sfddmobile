@@ -161,9 +161,7 @@
     </market-item>
   </market>
 </template>
-<style src='./material.css'>
-
-</style>
+<style src='./material.css' scoped></style>
 
 <script>
 import Market from '@/components/Market'

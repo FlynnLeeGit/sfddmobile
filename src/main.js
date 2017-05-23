@@ -4,7 +4,7 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
-import { AlertPlugin, ToastPlugin } from 'vux'
+import { AlertPlugin, ToastPlugin, LoadingPlugin } from 'vux'
 // for detect webp
 import './plugins/modernizr-custom'
 import './plugins/vue-lazy'
@@ -15,6 +15,7 @@ window.AlloyFinger = AlloyFinger
 Vue.use(AlertPlugin)
 Vue.use(AlloyFingerVue)
 Vue.use(ToastPlugin)
+Vue.use(LoadingPlugin)
 
 FastClick.attach(document.body)
 

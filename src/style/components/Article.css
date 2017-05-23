@@ -15,10 +15,9 @@
     margin-top: 10px;
     text-align: center;
     background-color: #f7f7f7;
-    &.-edge {
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-    }
+  }
+  @e x-img {
+    width: 100%;
   }
   @e desc {
     margin-top: 20px;

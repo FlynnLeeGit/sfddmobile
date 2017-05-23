@@ -42,7 +42,7 @@ export default {
   methods: {
     getTabName (tab, tabIdx) {
       const sKey = this.selected[tabIdx]
-      return sKey ? tab.filter[sKey] : tab.name
+      return sKey ? `${tab.name} ${tab.filter[sKey]}` : tab.name
     },
     updateSelected (newTabs) {
       let filters
