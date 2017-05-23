@@ -1,7 +1,7 @@
 <template>
   <div class="vrlist">
     <tab-filter :tabs='tabs' />
-    <ul>
+    <ul v-if='vrs.length'>
       <li class="Article"
           v-for='vr in vrs'
           :key='vr.id'>
@@ -15,12 +15,14 @@
         </a>
       </li>
     </ul>
+    <frag-no-result v-else />
   </div>
 </template>
 <style src='./vrlist.css'></style>
 <script>
 import axios from '@/plugins/axios'
 import { imgFilter } from '@/plugins/filters'
+import fragNoResult from '@/components/frag/no-result'
 
 import TabFilter from '@/components/TabFilter'
 
@@ -38,7 +40,8 @@ export default {
       })
   },
   components: {
-    TabFilter
+    TabFilter,
+    fragNoResult
   },
   data () {
     return {
