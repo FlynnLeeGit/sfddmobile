@@ -39,7 +39,8 @@
 import axios from '@/plugins/axios'
 import TabFilter from '@/components/TabFilter'
 import fragNoResult from '@/components/frag/no-result'
-import { LoadMore, Previewer } from 'vux'
+import { LoadMore } from 'vux'
+import Previewer from '@/components/vux/Previewer'
 
 const getImgs = (query, page) => {
   const axiosParams = Object.assign({}, query, { page: page })
