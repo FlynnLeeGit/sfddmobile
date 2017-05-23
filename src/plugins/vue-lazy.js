@@ -10,7 +10,8 @@ const getEdgeColor = url =>
       ctx.drawImage(img, 0, 0, img.width, img.height)
 
       const topColor = ctx.getImageData(0, 0, 1, 1).data
-      const bottomColor = ctx.getImageData(0, img.height - 1, 1, 1).data
+      const bottomColor = ctx.getImageData(0, 149, 1, 1).data
+      console.log(bottomColor)
       img = null
       ctx = null
       resolve({
@@ -26,6 +27,7 @@ class LoadEl {
   constructor (el, binding) {
     this.el = el
     this.binding = binding
+    this.bindingVal = binding.value
 
     this.isBg = binding.modifiers.bg
     this.isAnimate = binding.modifiers.animate
@@ -48,7 +50,7 @@ class LoadEl {
     return top < window.innerHeight * this.judge && bottom > 0 && !this.loaded
   }
   loadBg () {
-    this.el.style.backgroundImage = `url(${this.binding.value})`
+    this.el.style.backgroundImage = `url(${this.bindingVal})`
   }
   loadEdge () {
     getEdgeColor(this.binding.value).then(({ top, bottom }) => {
@@ -56,7 +58,7 @@ class LoadEl {
       const [bottomR, bottomG, bottomB, bottomA] = bottom
       this.el.style.backgroundImage = `linear-gradient(rgba(${topR},${topG},${topB},${topA}) 0%,rgba(${bottomR},${bottomG},${bottomB},${bottomA}) 100%)`
       const edgeContent = this.el.querySelector('.edge-content')
-      edgeContent.style.backgroundImage = `url(${this.binding.value})`
+      edgeContent.style.backgroundImage = `url(${this.bindingVal})`
     })
   }
   loadAnimate () {
