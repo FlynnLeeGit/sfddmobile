@@ -38,6 +38,8 @@ const servicesLoan = r => require(['@/pages/about/services/loan'], r)
 const servicesConstruction = r =>
   require(['@/pages/about/services/construction'], r)
 
+const aboutUs = r => require(['@/pages/about/us'], r)
+
 const caseDragon = r => require(['@/pages/cases/dragon'], r)
 const notFound = r => require(['@/pages/404'], r)
 
@@ -69,6 +71,10 @@ const routes = [
   {
     path: '/cases/dragon',
     component: caseDragon
+  },
+  {
+    path: '/about/us',
+    component: aboutUs
   },
   {
     path: '/about/ideas',
