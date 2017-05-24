@@ -5,12 +5,12 @@
         <section class="logos__hd _tc"
                  grid='middle'>
           <div>
-            <h1 class="Intro__title">
+            <h1 class="Intro__title animated fade">
               精选国内外一线品牌
               <br> 采用集采预定
               <br> 的方式对供应商下单
             </h1>
-            <p class="Intro__desc">
+            <p class="Intro__desc animated slideInUp fade">
               材料的挑选是工程质量的基础，
               <br> 我们拥有强大的供应链和严格的供应链考评机制，
               <br> 精选符合设计的国内外一线品牌，
@@ -22,7 +22,7 @@
             </p>
           </div>
         </section>
-        <section class="logos__bd _tc">
+        <section class="logos__bd _tc animated fade">
           <img src="../../../assets/ideas/material/logos.png"
                width="95%">
         </section>
@@ -33,10 +33,10 @@
       <div class="material-item forest"
            grid='bottom'>
         <div>
-          <h1 class="Intro__title">
+          <h1 class="Intro__title animated fade">
             环保责任
           </h1>
-          <p class="Intro__desc">
+          <p class="Intro__desc animated slideInUp fade">
             为确保整装竣工后的环保等级
             <br> 我们在四个环保的源头均采用主流品牌中环保等级最高的材料，
             <br> 从木工板材（木工板、生态板、石膏板）到界面材料
@@ -52,10 +52,10 @@
       <div class="material-item paint"
            grid='middle'>
         <div>
-          <h1 class="Intro__title">
+          <h1 class="Intro__title animated fade">
             涂料
           </h1>
-          <p class="Intro__desc">
+          <p class="Intro__desc animated slideInUp fade">
             我们所采用的涂料产品所有性能必须符合或高于
             <br> 《合成树脂乳液内墙涂料》
             <br> GB/T 9756-2009一等品的指标要求，
@@ -74,10 +74,10 @@
     <market-item>
       <div class="material-item woodwork">
         <div>
-          <h1 class="Intro__title">
+          <h1 class="Intro__title animated fade">
             木作
           </h1>
-          <p class="Intro__desc">
+          <p class="Intro__desc animated slideInUp fade">
             木作产品所有性能必须符合或高于
             <br> 《室内装饰装修材料人造板及其制品中甲醛释放量》
             <br> GB18580-2001指标要求
@@ -98,10 +98,10 @@
         <div class="bath__content"
              grid='middle'>
           <div>
-            <h1 class="Intro__title">
+            <h1 class="Intro__title animated fade">
               卫浴洁具质量标准
             </h1>
-            <p class="Intro__desc">
+            <p class="Intro__desc animated slideInUp fade">
               我们所选用的陶瓷产品所有性能必须符合中国国家标准《卫生陶瓷》
               <br> GB 6952-2005中的指标要求
               <br> 釉面、外观缺陷最大允许范围、最大允许变形、尺寸
@@ -121,10 +121,10 @@
       <div class="material-item floor"
            grid='bottom'>
         <div>
-          <h1 class="Intro__title">
+          <h1 class="Intro__title animated fade">
             地板质量标准
           </h1>
-          <p class="Intro__desc">
+          <p class="Intro__desc animated slideInUp fade">
             我国家标准，精选全国优秀的供应商，
             <br> 构家要求每一块木地板的厚度偏差≤0.5mm，长度偏差≤1mm，
             <br> 宽度偏差≤0.2mm，直角度≤0.2mm，边角直度≤0.3mm/m，
@@ -140,10 +140,10 @@
       <div class="material-item tile"
            grid='bottom'>
         <div>
-          <h1 class="Intro__title">
+          <h1 class="Intro__title animated fade">
             瓷砖质量标准
           </h1>
-          <p class="Intro__desc">
+          <p class="Intro__desc animated slideInUp fade">
             我室内墙面釉面每块瓷砖表面平整，稳质均匀，
             <br> 垂直观测无缺陷。破坏强度，断裂模数，抗震性，
             <br> 抗釉裂性均必须通过严格检测，

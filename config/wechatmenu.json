@@ -1,74 +1,75 @@
 {
- "button":[
- {
-       "name":"产品",
-       "sub_button":[
-        {
-           "type":"view",
-           "name":"成品整装",
-           "url":"http://staging.sfdd.com/mobile/assemble/list"
+  "button": [{
+      "name": "产品",
+      "sub_button": [{
+          "type": "view",
+          "name": "成品整装",
+          "url": "http://staging.sfdd.com/mobile/assemble/list"
         },
         {
-           "type":"view",
-           "name":"一对一定制",
-           "url":"http://staging.sfdd.com/mobile/custom-design"
+          "type": "view",
+          "name": "一对一定制",
+          "url": "http://staging.sfdd.com/mobile/custom-design"
         },
         {
-           "type":"view",
-           "name":"热销小区预案",
-           "url":"http://staging.sfdd.com/mobile/cases/dragon"
-        }]
-  },
-  {
-       "name":"中孚空间",
-       "sub_button":[{
-           "type":"view",
-           "name":"理念",
-           "url":"http://staging.sfdd.com/mobile/about/ideas/design"
+          "type": "view",
+          "name": "热销小区预案",
+          "url": "http://staging.sfdd.com/mobile/cases/dragon"
+        }
+      ]
+    },
+    {
+      "name": "中孚空间",
+      "sub_button": [{
+          "type": "view",
+          "name": "理念",
+          "url": "http://staging.sfdd.com/mobile/about/ideas/design"
         },
         {
-           "type":"view",
-           "name":"服务",
-           "url":"http://staging.sfdd.com/mobile/about/services"
+          "type": "view",
+          "name": "服务",
+          "url": "http://staging.sfdd.com/mobile/about/services/zero"
         },
         {
-           "type":"view",
-           "name":"团队",
-           "url":"http://staging.sfdd.com/mobile/about/us"
+          "type": "view",
+          "name": "团队",
+          "url": "http://staging.sfdd.com/mobile/about/us"
         },
         {
-           "type":"view",
-           "name":"部分作品",
-           "url":"http://staging.sfdd.com/mobile/custom-design/vrlist"
-        }]
-   },
-   {
-       "name":"我的",
-       "sub_button":[
-           {
-           "type":"view",
-           "name":"合同预算",
-           "url":"http://staging.sfdd.com/mobile/ucenter/contract"
+          "type": "view",
+          "name": "部分作品",
+          "url": "http://staging.sfdd.com/mobile/custom-design/vrlist"
+        }
+      ]
+    },
+    {
+      "name": "我的",
+      "sub_button": [{
+          "type": "view",
+          "name": "合同预算",
+          "url": "http://staging.sfdd.com/mobile/ucenter/contract"
         },
         {
-           "type":"view",
-           "name":"材料清单",
-           "url":"http://staging.sfdd.com/mobile/ucenter/material"
+          "type": "view",
+          "name": "材料清单",
+          "url": "http://staging.sfdd.com/mobile/ucenter/material"
         },
         {
-           "type":"view",
-           "name":"工程进度",
-           "url":"http://staging.sfdd.com/mobile/ucenter/progress"
+          "type": "view",
+          "name": "工程进度",
+          "url": "http://staging.sfdd.com/mobile/ucenter/progress"
         },
         {
-           "type":"view",
-           "name":"售后服务",
-           "url":"http://staging.sfdd.com/mobile/ucenter/aftersales"
+          "type": "view",
+          "name": "售后服务",
+          "url": "http://staging.sfdd.com/mobile/ucenter/aftersales"
         },
         {
-           "type":"view",
-           "name":"装修贷款",
-           "url":"http://staging.sfdd.com/mobile/ucenter/loan"
-        }]
-   }]
+          "type": "view",
+          "name": "装修贷款",
+          "url": "http://staging.sfdd.com/mobile/ucenter/loan"
+        }
+      ]
+    }
+  ]
 }

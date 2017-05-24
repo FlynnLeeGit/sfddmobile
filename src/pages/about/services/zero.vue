@@ -1,7 +1,7 @@
 <template>
    <market>
      <market-item>
-
+      zero
      </market-item>
      <market-item>
 
