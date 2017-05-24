@@ -1,25 +1,5 @@
 import Vue from 'vue'
 
-// const getEdgeColor = url =>
-//   new Promise((resolve, reject) => {
-//     let ctx = document.createElement('canvas').getContext('2d')
-//     let img = new Image()
-//     img.crossOrigin = true
-//     img.src = url
-//     img.onload = () => {
-//       ctx.drawImage(img, 0, 0, img.width, img.height)
-
-//       const topColor = ctx.getImageData(0, 0, 1, 1).data
-//       const bottomColor = ctx.getImageData(0, 149, 1, 1).data
-//       img = null
-//       ctx = null
-//       resolve({
-//         top: topColor,
-//         bottom: bottomColor
-//       })
-//     }
-//   })
-
 // 图片懒加载
 const elHashMap = {}
 class LoadEl {
