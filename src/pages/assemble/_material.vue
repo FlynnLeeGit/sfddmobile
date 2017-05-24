@@ -28,6 +28,13 @@ export default {
         }
       })
   },
+  beforeRouteUpdate (to, from, next) {
+    if (!to.params.sid) {
+      next(`/assemble/material/${to.params.style}/${this.spaces[0].id}`)
+    } else {
+      next()
+    }
+  },
   components: {
     TabFilter
   },

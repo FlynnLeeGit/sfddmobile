@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "node build/dev-server.js & node webp.js",
     "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "s": "git push && echo [deploy start] mobile-staging && cd ../deploy && npm run m-staging && echo [deploy end] mobile-staging"
   },
   "dependencies": {
     "alloyfinger": "^0.1.6",

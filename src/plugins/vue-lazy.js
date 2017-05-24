@@ -1,25 +1,24 @@
 import Vue from 'vue'
 
-const getEdgeColor = url =>
-  new Promise((resolve, reject) => {
-    let ctx = document.createElement('canvas').getContext('2d')
-    let img = new Image()
-    img.crossOrigin = true
-    img.src = url
-    img.onload = () => {
-      ctx.drawImage(img, 0, 0, img.width, img.height)
+// const getEdgeColor = url =>
+//   new Promise((resolve, reject) => {
+//     let ctx = document.createElement('canvas').getContext('2d')
+//     let img = new Image()
+//     img.crossOrigin = true
+//     img.src = url
+//     img.onload = () => {
+//       ctx.drawImage(img, 0, 0, img.width, img.height)
 
-      const topColor = ctx.getImageData(0, 0, 1, 1).data
-      const bottomColor = ctx.getImageData(0, 149, 1, 1).data
-      console.log(bottomColor)
-      img = null
-      ctx = null
-      resolve({
-        top: topColor,
-        bottom: bottomColor
-      })
-    }
-  })
+//       const topColor = ctx.getImageData(0, 0, 1, 1).data
+//       const bottomColor = ctx.getImageData(0, 149, 1, 1).data
+//       img = null
+//       ctx = null
+//       resolve({
+//         top: topColor,
+//         bottom: bottomColor
+//       })
+//     }
+//   })
 
 // 图片懒加载
 const elHashMap = {}
@@ -31,7 +30,6 @@ class LoadEl {
 
     this.isBg = binding.modifiers.bg
     this.isAnimate = binding.modifiers.animate
-    this.isEdge = binding.modifiers.edge
     this.judge = 1
 
     if (this.isAnimate) {
@@ -52,15 +50,6 @@ class LoadEl {
   loadBg () {
     this.el.style.backgroundImage = `url(${this.bindingVal})`
   }
-  loadEdge () {
-    getEdgeColor(this.binding.value).then(({ top, bottom }) => {
-      const [topR, topG, topB, topA] = top
-      const [bottomR, bottomG, bottomB, bottomA] = bottom
-      this.el.style.backgroundImage = `linear-gradient(rgba(${topR},${topG},${topB},${topA}) 0%,rgba(${bottomR},${bottomG},${bottomB},${bottomA}) 100%)`
-      const edgeContent = this.el.querySelector('.edge-content')
-      edgeContent.style.backgroundImage = `url(${this.bindingVal})`
-    })
-  }
   loadAnimate () {
     this.el.classList.add('animated')
     try {
@@ -76,9 +65,6 @@ class LoadEl {
       this.loaded = true
       if (this.isBg) {
         this.loadBg()
-      }
-      if (this.isEdge) {
-        this.loadEdge()
       }
       if (this.isAnimate) {
         this.loadAnimate()

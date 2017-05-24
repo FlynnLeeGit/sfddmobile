@@ -54,7 +54,6 @@ export default {
   beforeRouteEnter (to, from, next) {
     getImgs(to.query, 1)
       .then(({ data }) => {
-        console.log(data)
         next(vm => {
           vm.insList = data.paginate.items
           vm.totalCount = data.paginate.totalCount
