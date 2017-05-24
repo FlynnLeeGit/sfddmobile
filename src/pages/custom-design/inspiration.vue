@@ -117,7 +117,7 @@ export default {
   },
   methods: {
     hozzyImgFilter (fname, suffix) {
-      return `https://dn-st.baogaoyezhu.com/${fname}_${suffix}`
+      return fname && `https://dn-st.baogaoyezhu.com/${fname}_${suffix}`
     },
     needMore () {
       if (this.hasMore && !this.isLoadingMore) {
