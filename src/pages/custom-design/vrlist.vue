@@ -5,7 +5,7 @@
       <li class="Article"
           v-for='vr in vrs'
           :key='vr.id'>
-        <a :href="'/virtual_reality/inspirations/'+vr.id+'/vr'">
+        <a :href="'/virtual_reality/inspirations/'+vr.id+'/vr?mobile=1'">
           <div class="Article__img"
                v-lazy.bg="imgFilter(vr.thumb,'case380')"></div>
           <p class="Article__desc">

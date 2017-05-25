@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     vrUrl () {
-      return `/virtual_reality/scene/${this.styleId}?hideControl=1`
+      return `/virtual_reality/scene/${this.styleId}?mobile=1`
     }
   }
 }
