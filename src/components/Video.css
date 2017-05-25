@@ -1,0 +1,8 @@
+@b Video {
+  background-color: #000;
+  display: inline-block;
+  @e v {
+    width: 85vw;
+    vertical-align: top;
+  }
+}

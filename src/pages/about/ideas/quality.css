@@ -13,14 +13,6 @@
   }
 }
 
-@b line {
-  @e hd {
-    @mixin px2h 734;
-  }
-  @e video {
-    @mixin px2h 360;
-  }
-}
 
 @b accuracy {
   @e hd {

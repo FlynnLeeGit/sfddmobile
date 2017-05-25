@@ -1,0 +1,12 @@
+@import '../../../style/mixins.css';
+@b top {
+  height: 100%;
+  padding-bottom: 50px;
+  text-align: center;
+  @mixin bgWebp services/construction/key.png;
+  background-size: 70% auto;
+  background-repeat: no-repeat;
+  @e content {
+    @mixin px2w 626;
+  }
+}

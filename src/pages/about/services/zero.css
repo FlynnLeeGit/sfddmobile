@@ -1,0 +1,60 @@
+@import '../../../style/mixins.css';
+@b top {
+  height: 100%;
+  background-color: #fff;
+  padding-top: 70px;
+  @e hd {}
+  @e bd {}
+  @e img {
+    @mixin px2h 614;
+  }
+}
+
+@b budget {
+  height: 100%;
+  background-color: #282b34;
+  @e hd {
+    color: #fff;
+    @mixin px2h 787;
+  }
+  @e item {
+    text-align: center;
+    h3 {
+      font-size: 12px;
+      color: #ef192e;
+    }
+    p {
+      font-size: 10px;
+      color: #8e8e8e;
+      margin-top: 10px;
+    }
+  }
+  @e icon-wrap {
+    height: 75px;
+  }
+  @e symbol {
+    margin: 70px 4vw 0;
+  }
+  @e txt {
+    font-size: 9px;
+    color: #7c7c7c;
+    margin-top: 34px;
+  }
+}
+
+@b increment {
+  height: 100%;
+  padding-bottom: 60px;
+  background-color: #fff;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-align: center;
+  @mixin bgWebp services/zero/pen.jpg;
+  @e content {
+    @mixin px2w 580;
+    text-align: left;
+  }
+  @e img {
+    margin-bottom: 35px;
+  }
+}

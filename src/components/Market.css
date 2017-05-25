@@ -15,16 +15,21 @@
   }
   @e arrow {
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    width: 30px;
-    margin-left: -15px;
-    animation-fill-mode: both;
-    animation: arrow .5s infinite alternate;
+    background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, .3) 100%);
+    bottom: 0;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    left: 0;
+    width: 100%;
     transition: opacity .5s;
     &[hide] {
       opacity: 0;
     }
+  }
+  @e arrow-img {
+    animation-fill-mode: both;
+    animation: arrow .5s infinite alternate;
   }
   @e audio {
     position: absolute;

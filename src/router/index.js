@@ -111,7 +111,7 @@ const routes = [
         component: servicesLoan
       },
       {
-        path: 'loan',
+        path: 'construction',
         component: servicesConstruction
       }
     ]

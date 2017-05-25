@@ -33,7 +33,7 @@
         {
           "type": "view",
           "name": "团队",
-          "url": "http://staging.sfdd.com/mobile/about/us"
+          "url": "http://staging.sfdd.com/mobile/about/us?team=design"
         },
         {
           "type": "view",

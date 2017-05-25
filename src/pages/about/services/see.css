@@ -1,0 +1,12 @@
+@import '../../../style/mixins.css';
+@b top {
+  @mixin bgCover;
+  @mixin bgWebp services/see/banner.jpg;
+  height: 100%;
+}
+
+@b real {
+  @e hd {
+    @mixin px2h 773;
+  }
+}

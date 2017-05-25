@@ -1,7 +1,11 @@
-._tc {
-  text-align: center;
-}
-
-._color-primary {
-  color: #ff5a5f;
+#app {
+  ._tc {
+    text-align: center;
+  }
+  ._tl {
+    text-align: left;
+  }
+  ._color-primary {
+    color: #ff5a5f;
+  }
 }

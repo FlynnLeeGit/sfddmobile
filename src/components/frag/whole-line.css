@@ -1,0 +1,8 @@
+@b whole-line {
+  @e hd {
+    @mixin px2h 734;
+  }
+  @e video {
+    @mixin px2h 360;
+  }
+}

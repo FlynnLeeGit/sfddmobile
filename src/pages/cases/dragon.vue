@@ -120,24 +120,24 @@
     </market-item>
 
     <!--<market-item>
-                  <div class="video">
-                    <section class="video__hd _tc"
-                             grid='middle'>
-                      <h1 class="Intro__title">了解中孚的三个视频</h1>
-                    </section>
-                    <section class="video__bd">
-                      <video class="video__item"
-                             src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
-                      </video>
-                      <video class="video__item"
-                             src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
-                      </video>
-                      <video class="video__item"
-                             src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
-                      </video>
-                    </section>
-                  </div>
-                </market-item>-->
+                    <div class="video">
+                      <section class="video__hd _tc"
+                               grid='middle'>
+                        <h1 class="Intro__title">了解中孚的三个视频</h1>
+                      </section>
+                      <section class="video__bd">
+                        <video class="video__item"
+                               src="//video.baogaoyezhu.com/video/sfdd/1.mp4">
+                        </video>
+                        <video class="video__item"
+                               src="//video.baogaoyezhu.com/video/sfdd/2.mp4">
+                        </video>
+                        <video class="video__item"
+                               src="//video.baogaoyezhu.com/video/sfdd/3.mp4">
+                        </video>
+                      </section>
+                    </div>
+                  </market-item>-->
 
     <market-item>
       <div class="team">
@@ -157,75 +157,7 @@
     </market-item>
 
     <market-item>
-      <div class="flow">
-        <section class="flow__hd _tc"
-                 grid='middle'>
-          <div>
-            <h1 class="Intro__title">
-              付款流程
-            </h1>
-            <p class="Intro__desc">
-              开工仅需支付￥5000定金，水电验收通过后支付60%，
-              <br>泥木验收后支付35%，竣工验收后支付5%
-            </p>
-          </div>
-        </section>
-        <section class="flow__bd">
-          <ul class="flow-icons"
-              grid>
-            <li class="flow-icons__li">
-              <h3>开工</h3>
-              <div class="flow-icons__img-wrap"
-                   grid='middle'>
-                <img src="../../assets/payflow/icon1.png"
-                     width="31px">
-              </div>
-              <p>￥5000</p>
-            </li>
-            <li class="flow-icons__li">
-              <h3>水电</h3>
-              <div class="flow-icons__img-wrap"
-                   grid='middle'>
-                <img src="../../assets/payflow/icon2.png"
-                     width="40px">
-              </div>
-              <p>60%</p>
-            </li>
-            <li class="flow-icons__line">
-              <img src="../../assets/payflow/line.png"
-                   width="100%"
-                   height="1px">
-            </li>
-          </ul>
-          <ul class="flow-icons"
-              grid>
-            <li class="flow-icons__li">
-              <h3>泥木</h3>
-              <div class="flow-icons__img-wrap"
-                   grid='middle'>
-                <img src="../../assets/payflow/icon3.png"
-                     width="42px">
-              </div>
-              <p>35%</p>
-            </li>
-            <li class="flow-icons__li">
-              <h3>竣工</h3>
-              <div class="flow-icons__img-wrap"
-                   grid='middle'>
-                <img src="../../assets/payflow/icon4.png"
-                     width="40px">
-              </div>
-              <p>5%</p>
-            </li>
-            <li class="flow-icons__line">
-              <img src="../../assets/payflow/line.png"
-                   width="100%"
-                   height="1px">
-            </li>
-          </ul>
-
-        </section>
-      </div>
+      <frag-payflow />
     </market-item>
 
     <market-item>
@@ -240,6 +172,7 @@
 <script>
 import Market from '@/components/Market'
 import MarketItem from '@/components/MarketItem'
+import fragPayflow from '@/components/frag/payflow'
 import fragKnowAssemble from '@/components/frag/know-assemble'
 import { Tab, TabItem, Swiper, SwiperItem } from 'vux'
 
@@ -251,7 +184,8 @@ export default {
     TabItem,
     Swiper,
     SwiperItem,
-    fragKnowAssemble
+    fragKnowAssemble,
+    fragPayflow
   },
   data () {
     return {

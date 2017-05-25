@@ -3,10 +3,13 @@
        v-finger:swipe='swipe'
        @touchmove.prevent>
     <slot></slot>
-    <img :hide='idx>=len-1'
-         class="Market__arrow"
-         :src="arrowImg"
-         alt="arrow">
+    <div class="Market__arrow"
+         :hide='idx>=len-1'>
+      <img height='30%'
+           class="Market__arrow-img"
+           :src="arrowImg"
+           alt="arrow">
+    </div>
 
     <div v-finger:tap='togglePlay'
          v-if='audio'

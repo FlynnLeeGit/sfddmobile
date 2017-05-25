@@ -15,28 +15,7 @@
       </div>
     </market-item>
     <market-item>
-      <div class="line">
-        <section class="line__hd _tc"
-                 grid='middle'>
-          <div>
-            <h1 class="Intro__title">全尺寸放线</h1>
-            <p class="Intro__desc">全尺寸放线作为我们在正式施工第一步，至关重要，
-              <br> 它是图纸校验、施工指导、分包商与材料商的量尺依据，
-              <br> 通过五根主控线（空间主控线、轴线、一米水平线、地面完成面线、
-              <br> 吊顶完成面线、机电标高线）
-              <br> 加以湿作业施工线、造型线、天花投影，
-              <br> 同时放线于现场，清晰的标示材质、尺寸，能提早暴露现场问题，
-              <br> 高效协调我们与各材料商、分包商之间的工作范围，
-              <br> 确保施工一气呵成。
-            </p>
-          </div>
-        </section>
-        <section class="line__bd _tc">
-          <video class="line__video"
-                 src="//video.baogaoyezhu.com/video/sfdd/2.mp4"
-                 controls></video>
-        </section>
-      </div>
+      <frag-whole-line />
     </market-item>
 
     <market-item>
@@ -111,13 +90,11 @@
         <section class="flow__hd _tc"
                  grid='middle'>
           <div>
-            <h1 class="Intro__title">三检制度</h1>
-            <p class="Intro__desc">施工的质量离不开成熟的质量控制体系、
-              <br> 我们标准采用高于国际（GB-50203）的企业标准验收依据，
-              <br> 独创了品控的三检制度，施工员自检、项目经理自检、质检员全检，
-              <br> 三检完成后提报验收，
-              <br> 每次验收时均用仪器采集数据，用数据判定合规标准。
-              <br> 更为您家的效果落地保驾护航。
+            <h1 class="Intro__title">高效管理</h1>
+            <p class="Intro__desc">多项目并发考验着我们的管理能力
+              <br> 面对同时数百个在建项目，每个项目超过120个质量主控点
+              <br> 我们采用云端项目管理系统，
+              <br> 井井有条的管理着每年数万计的质量主控点
             </p>
           </div>
         </section>
@@ -144,12 +121,14 @@
 <script>
 import Market from '@/components/Market'
 import MarketItem from '@/components/MarketItem'
+import fragWholeLine from '@/components/frag/whole-line'
 import fragCountDown from '@/components/frag/count-down'
 
 export default {
   components: {
     Market,
     MarketItem,
+    fragWholeLine,
     fragCountDown
   }
 }
